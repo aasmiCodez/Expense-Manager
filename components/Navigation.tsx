@@ -168,7 +168,7 @@ export default function Navigation({
 
       {/* Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 w-72 bg-white/95 backdrop-blur-xl shadow-2xl transform transition-all duration-300 ease-out lg:transform-none lg:shadow-lg lg:w-64 ${
+        className={`fixed inset-y-0 left-0 z-50 bg-white/95 backdrop-blur-xl shadow-2xl transform transition-all duration-300 ease-out lg:transform-none lg:shadow-lg ${sidebarCollapsed ? "w-20 lg:w-20" : "w-72 lg:w-64"} ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0`}
       >
