@@ -84,7 +84,7 @@ export default function LoginPage() {
         <div className="p-8 relative z-10">
           {/* Demo credentials */}
           {!isSignUp && (
-            <div className="bg-slate-700/50 border border-purple-500/30 rounded-lg p-4 mb-6 backdrop-blur-sm">
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-6 backdrop-blur-sm">
               <div className="flex items-center justify-between mb-2">
                 <p className="text-sm font-medium text-purple-300">
                   Demo Credentials
