@@ -11,7 +11,13 @@ import Budget from "./Budget";
 import Settings from "./Settings";
 import Navigation from "./Navigation";
 
-type Page = "dashboard" | "add" | "analytics" | "budget" | "settings";
+type Page =
+  | "dashboard"
+  | "masonry"
+  | "add"
+  | "analytics"
+  | "budget"
+  | "settings";
 
 export default function ExpenseApp() {
   const { isAuthenticated, isLoading } = useAuth();
