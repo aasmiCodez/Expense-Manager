@@ -310,7 +310,7 @@ export default function Dashboard() {
                     filter: `drop-shadow(0 0 10px rgba(147, 51, 234, 0.4))`,
                   }}
                 >
-                  <div className="text-white">{stat.icon}</div>
+                  <div className="text-gray-900">{stat.icon}</div>
                 </div>
                 <div
                   className={`px-3 py-2 rounded-full text-sm font-bold backdrop-blur-sm ${
@@ -341,7 +341,7 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
         {/* Recent Transactions */}
-        <div className="bg-slate-800/80 backdrop-blur-xl rounded-2xl border border-purple-500/30 card animate-scale-in relative overflow-hidden group">
+        <div className="bg-white/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 card animate-scale-in relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-blue-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
           <div className="p-6 border-b border-purple-500/30 relative z-10">
             <h3 className="text-lg font-semibold text-gray-900">
@@ -352,15 +352,15 @@ export default function Dashboard() {
             {recentTransactions.map((transaction) => (
               <div
                 key={transaction.id}
-                className="p-4 hover:bg-purple-500/10 transition-all duration-300 relative z-10 border-b border-slate-700/50 last:border-b-0"
+                className="p-4 hover:bg-purple-500/10 transition-all duration-300 relative z-10 border-b border-purple-200/50 last:border-b-0"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-slate-700 to-slate-600 rounded-full flex items-center justify-center text-purple-400 border border-purple-500/30 shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-purple-200 rounded-full flex items-center justify-center text-purple-400 border border-purple-500/30 shadow-lg">
                       {getTransactionIcon(transaction.category)}
                     </div>
                     <div>
-                      <p className="font-semibold text-white">
+                      <p className="font-semibold text-gray-900">
                         {transaction.description}
                       </p>
                       <p className="text-sm text-gray-600">
@@ -383,7 +383,7 @@ export default function Dashboard() {
         </div>
 
         {/* Category Breakdown */}
-        <div className="bg-slate-800/80 backdrop-blur-xl rounded-2xl border border-purple-500/30 card animate-scale-in relative overflow-hidden group">
+        <div className="bg-white/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 card animate-scale-in relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-blue-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
           <div className="p-6 border-b">
             <h3 className="text-lg font-semibold text-gray-900">
