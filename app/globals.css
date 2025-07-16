@@ -540,6 +540,48 @@ h6 {
   fill: #ffffff !important;
 }
 
+/* Highly specific overrides for stubborn elements */
+svg.text-yellow-300,
+.text-yellow-300 {
+  color: #fde047 !important;
+  stroke: #fde047 !important;
+  fill: #fde047 !important;
+}
+
+svg.text-gray-700,
+.text-gray-700 {
+  color: #374151 !important;
+  stroke: #374151 !important;
+  fill: #374151 !important;
+}
+
+.hover\:text-purple-600:hover {
+  color: #9333ea !important;
+  stroke: #9333ea !important;
+  fill: #9333ea !important;
+}
+
+/* Force ExpenseTracker icon color */
+div[class*="from-purple-600"] svg,
+div[style*="background: linear-gradient"] svg {
+  color: #fde047 !important;
+  stroke: #fde047 !important;
+}
+
+/* Force transaction icons to be dark */
+div[class*="from-gray-100"] svg,
+div[class*="to-gray-200"] svg {
+  color: #374151 !important;
+  stroke: #374151 !important;
+}
+
+/* Sidebar hover effects */
+.hover\:bg-purple-100:hover svg,
+.hover\:bg-purple-100:hover {
+  color: #9333ea !important;
+  stroke: #9333ea !important;
+}
+
 /* Labels should be bold and gray */
 label {
   color: #374151 !important;
