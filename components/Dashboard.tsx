@@ -263,7 +263,8 @@ export default function Dashboard() {
           </p>
         </div>
 
-        <div className="flex items-center space-x-2 bg-white/80 backdrop-blur-lg rounded-xl border shadow-lg p-1 animate-slide-in-right">
+        <div className="flex items-center space-x-2 bg-slate-800/80 backdrop-blur-lg rounded-xl border border-purple-500/30 shadow-2xl p-1 animate-slide-in-right relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-xl"></div>
           {["week", "month", "year"].map((period) => (
             <button
               key={period}
