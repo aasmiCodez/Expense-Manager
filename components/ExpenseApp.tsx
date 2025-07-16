@@ -21,7 +21,7 @@ type Page =
 
 export default function ExpenseApp() {
   const { isAuthenticated, isLoading } = useAuth();
-  const [currentPage, setCurrentPage] = useState<Page>("dashboard");
+  const [currentPage, setCurrentPage] = useState<Page>("masonry");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
