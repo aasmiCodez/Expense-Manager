@@ -28,9 +28,8 @@ export default function ExpenseApp() {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center safe-area-top safe-area-bottom relative overflow-hidden">
-        {/* Removed dark background orbs */}
-        <div className="text-center p-8 bg-slate-800/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-purple-500/30 animate-scale-in relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="text-center p-8 bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-purple-500/30 animate-scale-in relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-purple-400/10 to-purple-600/10 animate-pulse"></div>
           <div className="relative z-10">
             <div
               className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-6 shadow-lg"
@@ -38,10 +37,10 @@ export default function ExpenseApp() {
                 filter: "drop-shadow(0 0 10px rgba(147, 51, 234, 0.5))",
               }}
             />
-            <p className="text-white font-semibold text-lg">
+            <p className="text-gray-800 font-semibold text-lg">
               Checking authentication...
             </p>
-            <p className="text-slate-300 text-sm mt-2">Please wait a moment</p>
+            <p className="text-gray-600 text-sm mt-2">Please wait a moment</p>
           </div>
         </div>
       </div>
