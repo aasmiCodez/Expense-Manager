@@ -472,6 +472,12 @@ h6 {
 }
 
 /* Exception: text-white on purple backgrounds should remain white */
+.text-white {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* Ensure white text stays white on purple backgrounds */
 .bg-gradient-to-r .text-white,
 [class*="bg-purple"] .text-white,
 [class*="from-purple"] .text-white {
