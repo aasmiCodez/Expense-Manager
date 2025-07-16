@@ -522,16 +522,27 @@ button[class*="from-purple"],
   font-weight: 600 !important;
 }
 
-/* Period selector buttons - active should be white, inactive should be dark */
+/* Period selector buttons - active should be white, inactive should be black */
 button[class*="from-purple-600"] {
   color: #ffffff !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
 
-/* Inactive period selector buttons */
+/* Inactive period selector buttons should have black text */
 button:not([class*="bg-purple"]):not([class*="from-purple"]) {
-  color: #111827 !important;
-  font-weight: 600 !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* Force period selector buttons to have proper colors */
+.period-selector button {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+.period-selector button[class*="bg-gradient"] {
+  color: #ffffff !important;
+  font-weight: 700 !important;
 }
 
 /* Ensure strong contrast for important text */
