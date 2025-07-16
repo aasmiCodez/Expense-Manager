@@ -263,7 +263,7 @@ export default function Dashboard() {
           </p>
         </div>
 
-        <div className="flex items-center space-x-2 bg-slate-800/80 backdrop-blur-lg rounded-xl border border-purple-500/30 shadow-2xl p-1 animate-slide-in-right relative overflow-hidden">
+        <div className="flex items-center space-x-2 bg-white/90 backdrop-blur-lg rounded-xl border border-purple-500/30 shadow-2xl p-1 animate-slide-in-right relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-xl"></div>
           {["week", "month", "year"].map((period) => (
             <button
@@ -290,7 +290,7 @@ export default function Dashboard() {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="bg-slate-800/80 backdrop-blur-xl p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-400 hover:scale-105 card animate-scale-in relative overflow-hidden group"
+            className="bg-white/90 backdrop-blur-xl p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-400 hover:scale-105 card animate-scale-in relative overflow-hidden group"
           >
             {/* Animated background gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
@@ -310,7 +310,7 @@ export default function Dashboard() {
                     filter: `drop-shadow(0 0 10px rgba(147, 51, 234, 0.4))`,
                   }}
                 >
-                  <div className="text-white">{stat.icon}</div>
+                  <div className="text-gray-900">{stat.icon}</div>
                 </div>
                 <div
                   className={`px-3 py-2 rounded-full text-sm font-bold backdrop-blur-sm ${
@@ -330,10 +330,8 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="mt-4 relative z-10">
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent">
-                {stat.value}
-              </h3>
-              <p className="text-slate-300 text-sm mt-2 font-medium">
+              <h3 className="text-3xl font-bold text-gray-900">{stat.value}</h3>
+              <p className="text-gray-600 text-sm mt-2 font-medium">
                 {stat.label}
               </p>
             </div>
@@ -343,10 +341,10 @@ export default function Dashboard() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
         {/* Recent Transactions */}
-        <div className="bg-slate-800/80 backdrop-blur-xl rounded-2xl border border-purple-500/30 card animate-scale-in relative overflow-hidden group">
+        <div className="bg-white/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 card animate-scale-in relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-blue-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
           <div className="p-6 border-b border-purple-500/30 relative z-10">
-            <h3 className="text-lg font-semibold bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent">
+            <h3 className="text-lg font-semibold text-gray-900">
               Recent Transactions
             </h3>
           </div>
@@ -354,18 +352,18 @@ export default function Dashboard() {
             {recentTransactions.map((transaction) => (
               <div
                 key={transaction.id}
-                className="p-4 hover:bg-purple-500/10 transition-all duration-300 relative z-10 border-b border-slate-700/50 last:border-b-0"
+                className="p-4 hover:bg-purple-500/10 transition-all duration-300 relative z-10 border-b border-purple-200/50 last:border-b-0"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-slate-700 to-slate-600 rounded-full flex items-center justify-center text-purple-400 border border-purple-500/30 shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full flex items-center justify-center text-gray-700 border border-gray-300 shadow-lg">
                       {getTransactionIcon(transaction.category)}
                     </div>
                     <div>
-                      <p className="font-semibold text-white">
+                      <p className="font-semibold text-gray-900">
                         {transaction.description}
                       </p>
-                      <p className="text-sm text-slate-300">
+                      <p className="text-sm text-gray-600">
                         {transaction.category} • {transaction.date}
                       </p>
                     </div>
@@ -385,7 +383,7 @@ export default function Dashboard() {
         </div>
 
         {/* Category Breakdown */}
-        <div className="bg-slate-800/80 backdrop-blur-xl rounded-2xl border border-purple-500/30 card animate-scale-in relative overflow-hidden group">
+        <div className="bg-white/90 backdrop-blur-xl rounded-2xl border border-purple-500/30 card animate-scale-in relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-blue-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
           <div className="p-6 border-b">
             <h3 className="text-lg font-semibold text-gray-900">
@@ -401,7 +399,7 @@ export default function Dashboard() {
                       {category.name}
                     </span>
                     <span className="text-sm text-gray-500">
-                      ₹{category.amount.toLocaleString()}
+                      ���{category.amount.toLocaleString()}
                     </span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">

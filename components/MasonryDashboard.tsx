@@ -273,7 +273,7 @@ export default function MasonryDashboard() {
   const renderMasonryItem = (item: any) => {
     const baseClasses = `
       masonry-item
-      bg-slate-800/90 backdrop-blur-xl rounded-3xl 
+      bg-white/90 backdrop-blur-xl rounded-3xl 
       border border-purple-500/30 hover:border-purple-500/60
       transition-all duration-500 hover:scale-[1.02] 
       relative overflow-hidden group cursor-pointer
@@ -292,7 +292,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -317,7 +317,7 @@ export default function MasonryDashboard() {
               <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent mb-2">
                 {item.value}
               </h3>
-              <p className="text-slate-300 text-sm font-medium">{item.title}</p>
+              <p className="text-gray-600 text-sm font-medium">{item.title}</p>
             </div>
           </div>
         );
@@ -326,7 +326,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -346,7 +346,7 @@ export default function MasonryDashboard() {
                         ₹{category.amount.toLocaleString()}
                       </span>
                     </div>
-                    <div className="w-full bg-slate-700/50 rounded-full h-2">
+                    <div className="w-full bg-purple-100 rounded-full h-2">
                       <div
                         className="h-2 rounded-full"
                         style={{
@@ -369,7 +369,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -382,14 +382,14 @@ export default function MasonryDashboard() {
                 {item.transactions.map((transaction: any, index: number) => (
                   <div
                     key={index}
-                    className="flex items-center justify-between p-3 bg-slate-700/30 rounded-xl"
+                    className="flex items-center justify-between p-3 bg-purple-50 rounded-xl"
                   >
                     <div className="flex items-center space-x-3">
                       <div className="w-10 h-10 bg-gradient-to-r from-slate-600 to-slate-500 rounded-full flex items-center justify-center text-purple-400">
                         {getTransactionIcon(transaction.category)}
                       </div>
                       <div>
-                        <p className="font-semibold text-white text-sm">
+                        <p className="font-semibold text-gray-900 text-sm">
                           {transaction.description}
                         </p>
                         <p className="text-xs text-slate-400">
@@ -414,7 +414,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -435,11 +435,11 @@ export default function MasonryDashboard() {
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
                     {item.value}
                   </div>
-                  <div className="text-sm text-slate-300">
+                  <div className="text-sm text-gray-600">
                     {item.current} of {item.target}
                   </div>
                 </div>
-                <div className="w-full bg-slate-700/50 rounded-full h-3">
+                <div className="w-full bg-purple-100 rounded-full h-3">
                   <div
                     className="h-3 rounded-full bg-gradient-to-r from-cyan-400 to-cyan-600"
                     style={{ width: item.value }}
@@ -454,7 +454,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -472,20 +472,20 @@ export default function MasonryDashboard() {
               </h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-slate-300 text-sm">Total Budget</span>
-                  <span className="text-white font-bold">{item.value}</span>
+                  <span className="text-gray-600 text-sm">Total Budget</span>
+                  <span className="text-gray-900 font-bold">{item.value}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-300 text-sm">Used</span>
+                  <span className="text-gray-600 text-sm">Used</span>
                   <span className="text-red-400 font-bold">{item.used}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-300 text-sm">Remaining</span>
+                  <span className="text-gray-600 text-sm">Remaining</span>
                   <span className="text-green-400 font-bold">
                     {item.remaining}
                   </span>
                 </div>
-                <div className="w-full bg-slate-700/50 rounded-full h-2 mt-4">
+                <div className="w-full bg-purple-100 rounded-full h-2 mt-4">
                   <div
                     className="h-2 rounded-full bg-gradient-to-r from-amber-400 to-amber-600"
                     style={{ width: "81%" }}
@@ -500,7 +500,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -515,8 +515,8 @@ export default function MasonryDashboard() {
                     key={index}
                     className="flex justify-between items-center"
                   >
-                    <span className="text-slate-300 text-sm">{stat.label}</span>
-                    <span className="text-white font-bold text-sm">
+                    <span className="text-gray-600 text-sm">{stat.label}</span>
+                    <span className="text-gray-900 font-bold text-sm">
                       {stat.value}
                     </span>
                   </div>
@@ -530,7 +530,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -560,7 +560,7 @@ export default function MasonryDashboard() {
                         {investment.value}
                       </span>
                     </div>
-                    <div className="w-full bg-slate-700/50 rounded-full h-2">
+                    <div className="w-full bg-purple-100 rounded-full h-2">
                       <div
                         className="h-2 rounded-full bg-gradient-to-r from-violet-400 to-violet-600"
                         style={{ width: `${investment.percentage}%` }}
@@ -595,7 +595,7 @@ export default function MasonryDashboard() {
           </p>
         </div>
 
-        <div className="flex items-center space-x-2 bg-slate-800/80 backdrop-blur-lg rounded-xl border border-purple-500/30 shadow-2xl p-1 animate-slide-in-right relative overflow-hidden">
+        <div className="flex items-center space-x-2 bg-white/90 backdrop-blur-lg rounded-xl border border-purple-500/30 shadow-2xl p-1 animate-slide-in-right relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-xl"></div>
           {["week", "month", "year"].map((period) => (
             <button
@@ -604,7 +604,7 @@ export default function MasonryDashboard() {
               className={`px-4 py-2 text-sm font-bold rounded-lg transition-all duration-300 relative z-10 ${
                 selectedPeriod === period
                   ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg"
-                  : "hover:bg-purple-500/20 text-slate-300"
+                  : "hover:bg-purple-500/20 text-gray-600"
               }`}
             >
               {period.charAt(0).toUpperCase() + period.slice(1)}

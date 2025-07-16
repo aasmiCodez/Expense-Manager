@@ -11,6 +11,7 @@ export default function LoginPage() {
     password: "",
   });
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const { login, signup, isLoading } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -38,22 +39,22 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4 animate-fade-in-up relative overflow-hidden">
+    <div className="min-h-screen bg-white flex items-center justify-center p-4 animate-fade-in-up relative overflow-hidden">
       {/* Animated background orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
       <div
-        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
+        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-400/5 rounded-full blur-3xl animate-pulse"
         style={{ animationDelay: "2s" }}
       ></div>
       <div
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-pulse"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-300/5 rounded-full blur-3xl animate-pulse"
         style={{ animationDelay: "4s" }}
       ></div>
-      <div className="bg-slate-800/90 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all duration-300 hover:scale-105 border border-purple-500/30 relative z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10 rounded-3xl"></div>
+      <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all duration-300 hover:scale-105 border border-purple-300 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-purple-400/5 to-purple-300/5 rounded-3xl"></div>
         {/* Header */}
-        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 p-8 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-blue-400/20 animate-pulse"></div>
+        <div className="bg-gradient-to-r from-purple-600 to-purple-700 p-8 text-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-purple-500/20 animate-pulse"></div>
           <div
             className="w-18 h-18 bg-white/20 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-4 relative z-10 shadow-xl"
             style={{ filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.3))" }}
@@ -75,7 +76,7 @@ export default function LoginPage() {
           <h1 className="text-2xl font-bold text-white mb-2">
             {isSignUp ? "Create Account" : "Welcome Back"}
           </h1>
-          <p className="text-purple-100">
+          <p className="text-white">
             {isSignUp ? "Join ExpenseTracker today" : "Sign in to your account"}
           </p>
         </div>
@@ -84,24 +85,24 @@ export default function LoginPage() {
         <div className="p-8 relative z-10">
           {/* Demo credentials */}
           {!isSignUp && (
-            <div className="bg-slate-700/50 border border-purple-500/30 rounded-lg p-4 mb-6 backdrop-blur-sm">
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-6 backdrop-blur-sm">
               <div className="flex items-center justify-between mb-2">
-                <p className="text-sm font-medium text-purple-300">
+                <p className="text-sm font-medium text-purple-700">
                   Demo Credentials
                 </p>
                 <button
                   type="button"
                   onClick={handleDemoLogin}
                   disabled={isLoading}
-                  className="text-xs text-purple-400 hover:text-purple-300 font-medium disabled:text-slate-500 disabled:cursor-not-allowed"
+                  className="text-xs text-purple-600 hover:text-purple-500 font-medium disabled:text-gray-400 disabled:cursor-not-allowed"
                 >
                   Use Demo →
                 </button>
               </div>
-              <p className="text-xs text-purple-300">
+              <p className="text-xs text-purple-700">
                 Email: aasmi@example.com
               </p>
-              <p className="text-xs text-purple-300">Password: password123</p>
+              <p className="text-xs text-purple-700">Password: password123</p>
             </div>
           )}
 
@@ -124,7 +125,7 @@ export default function LoginPage() {
                     setFormData({ ...formData, name: e.target.value })
                   }
                   disabled={isLoading}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
                   placeholder="Enter your full name"
                   required
                 />
@@ -142,7 +143,7 @@ export default function LoginPage() {
                   setFormData({ ...formData, email: e.target.value })
                 }
                 disabled={isLoading}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
                 placeholder="Enter your email"
                 required
               />
@@ -152,17 +153,60 @@ export default function LoginPage() {
               <label className="block text-sm font-medium text-black mb-2">
                 Password
               </label>
-              <input
-                type="password"
-                value={formData.password}
-                onChange={(e) =>
-                  setFormData({ ...formData, password: e.target.value })
-                }
-                disabled={isLoading}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
-                placeholder="Enter your password"
-                required
-              />
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  value={formData.password}
+                  onChange={(e) =>
+                    setFormData({ ...formData, password: e.target.value })
+                  }
+                  disabled={isLoading}
+                  className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
+                  placeholder="Enter your password"
+                  required
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  disabled={isLoading}
+                  className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600 disabled:cursor-not-allowed"
+                >
+                  {showPassword ? (
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 11-4.243-4.243m4.242 4.242L9.88 9.88"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                  )}
+                </button>
+              </div>
             </div>
 
             <button
