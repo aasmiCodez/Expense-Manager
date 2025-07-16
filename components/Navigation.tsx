@@ -274,7 +274,7 @@ export default function Navigation({
                   className={`${sidebarCollapsed ? "" : "mr-4"} p-2 rounded-lg transition-colors ${
                     currentPage === item.id
                       ? "bg-purple-100 text-purple-600"
-                      : "bg-gray-100 text-black hover:bg-purple-100"
+                      : "bg-gray-100 text-gray-700 hover:bg-purple-100 hover:text-purple-600"
                   }`}
                 >
                   {item.icon}
