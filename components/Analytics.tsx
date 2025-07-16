@@ -115,7 +115,7 @@ export default function Analytics() {
             <div className="space-y-4">
               {monthlyData.map((data, index) => (
                 <div key={index} className="flex items-center justify-between">
-                  <div className="text-sm font-medium text-gray-700">
+                  <div className="text-sm font-medium text-black">
                     {data.month}
                   </div>
                   <div className="flex items-center space-x-4">
@@ -154,7 +154,7 @@ export default function Analytics() {
               {categoryBreakdown.map((category, index) => (
                 <div key={index}>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-medium text-black">
                       {category.category}
                     </span>
                     <div className="flex items-center space-x-2">
