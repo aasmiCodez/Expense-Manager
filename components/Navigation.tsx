@@ -258,8 +258,8 @@ export default function Navigation({
                 }}
                 className={`w-full flex items-center ${sidebarCollapsed ? "px-2 py-4 justify-center" : "px-4 py-4"} rounded-xl transition-all duration-300 hover:scale-105 animate-slide-in-left ${
                   currentPage === item.id
-                    ? "bg-gradient-to-r from-purple-50 to-purple-100 text-purple-600 shadow-md border border-purple-200"
-                    : "text-gray-700 hover:bg-gray-50 hover:shadow-sm"
+                    ? "bg-gradient-to-r from-purple-50 to-purple-100 text-black shadow-md border border-purple-200"
+                    : "text-black hover:bg-purple-50 hover:shadow-sm"
                 }`}
                 style={{ animationDelay: `${index * 50}ms` }}
                 title={sidebarCollapsed ? item.label : ""}
@@ -268,7 +268,7 @@ export default function Navigation({
                   className={`${sidebarCollapsed ? "" : "mr-4"} p-2 rounded-lg transition-colors ${
                     currentPage === item.id
                       ? "bg-purple-100 text-purple-600"
-                      : "bg-gray-100 text-gray-500 group-hover:bg-gray-200"
+                      : "bg-gray-100 text-black hover:bg-purple-100"
                   }`}
                 >
                   {item.icon}
