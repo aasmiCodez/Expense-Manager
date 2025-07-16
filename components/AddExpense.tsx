@@ -229,7 +229,7 @@ export default function AddExpense() {
       <div>
         <div className="animate-slide-in-left">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
               Add
             </span>{" "}
             Expense
