@@ -122,12 +122,29 @@ export default function Navigation({
 
   return (
     <>
-      {/* Mobile header */}
-      <div className="lg:hidden bg-white shadow-sm border-b px-4 py-3 flex items-center justify-between">
-        <h1 className="text-xl font-bold text-gray-900">ExpenseTracker</h1>
+      {/* Modern Mobile header */}
+      <div className="lg:hidden bg-white/90 backdrop-blur-lg shadow-sm border-b px-4 py-4 flex items-center justify-between sticky-header safe-area-top">
+        <div className="flex items-center space-x-3">
+          <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+            <svg
+              className="w-5 h-5 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"
+              />
+            </svg>
+          </div>
+          <h1 className="text-xl font-bold text-gray-900">ExpenseTracker</h1>
+        </div>
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="p-2 rounded-lg hover:bg-gray-100"
+          className="p-3 rounded-xl hover:bg-gray-100 transition-all duration-200 hover:scale-105 touch-target"
         >
           <svg
             className="w-6 h-6"
@@ -147,7 +164,7 @@ export default function Navigation({
 
       {/* Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out lg:transform-none ${
+        className={`fixed inset-y-0 left-0 z-50 w-72 bg-white/95 backdrop-blur-xl shadow-2xl transform transition-all duration-300 ease-out lg:transform-none lg:shadow-lg lg:w-64 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0`}
       >
