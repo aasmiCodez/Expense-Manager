@@ -74,8 +74,8 @@ export default function Analytics() {
               onClick={() => setSelectedPeriod(period)}
               className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
                 selectedPeriod === period
-                  ? "bg-blue-600 text-white"
-                  : "text-gray-600 hover:text-gray-900"
+                  ? "bg-gradient-to-r from-purple-600 to-purple-700 text-white"
+                  : "text-gray-600 hover:text-gray-900 hover:bg-purple-50"
               }`}
             >
               {period.charAt(0).toUpperCase() + period.slice(1)}
