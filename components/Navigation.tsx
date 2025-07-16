@@ -173,10 +173,10 @@ export default function Navigation({
         } lg:translate-x-0`}
       >
         {/* Header */}
-        <div className="flex items-center px-6 py-4 border-b">
-          <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+        <div className="flex items-center px-6 py-6 border-b bg-gradient-to-r from-purple-50 to-white relative">
+          <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-purple-800 rounded-xl flex items-center justify-center shadow-lg animate-float">
             <svg
-              className="w-5 h-5 text-white"
+              className="w-6 h-6 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -189,23 +189,60 @@ export default function Navigation({
               />
             </svg>
           </div>
-          <span className="text-xl font-bold text-gray-900">
-            ExpenseTracker
-          </span>
+          {!sidebarCollapsed && (
+            <div className="ml-3">
+              <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+                ExpenseTracker
+              </span>
+              <p className="text-xs text-gray-500 mt-1">
+                Modern Finance Management
+              </p>
+            </div>
+          )}
+          {/* Collapse Toggle - Desktop Only */}
+          <button
+            onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+            className="hidden lg:flex absolute -right-3 top-1/2 transform -translate-y-1/2 w-6 h-6 bg-white border border-gray-200 rounded-full items-center justify-center hover:bg-gray-50 transition-colors shadow-md"
+          >
+            <svg
+              className={`w-3 h-3 text-gray-600 transition-transform duration-200 ${sidebarCollapsed ? "rotate-180" : ""}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
         </div>
 
         {/* User info */}
-        <div className="px-6 py-4 border-b bg-gray-50">
+        <div className="px-6 py-5 border-b bg-gradient-to-r from-purple-50 to-white">
           <div className="flex items-center">
-            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
-              <span className="text-blue-600 font-medium">
-                {user?.name?.charAt(0)}
-              </span>
+            <div className="relative">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-purple-200 rounded-full flex items-center justify-center shadow-md">
+                <span className="text-purple-600 font-semibold text-lg">
+                  {user?.name?.charAt(0)}
+                </span>
+              </div>
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
             </div>
-            <div>
-              <p className="font-medium text-gray-900">{user?.name}</p>
-              <p className="text-sm text-gray-500">{user?.email}</p>
-            </div>
+            {!sidebarCollapsed && (
+              <div className="flex-1 ml-4">
+                <p className="font-semibold text-gray-900">{user?.name}</p>
+                <p className="text-sm text-gray-600">{user?.email}</p>
+                <div className="flex items-center mt-1">
+                  <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                  <span className="text-xs text-green-600 font-medium">
+                    Active
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
