@@ -326,6 +326,31 @@ body {
   box-shadow: var(--shadow-purple);
 }
 
+/* Ensure button text is always visible */
+.btn-primary,
+button[class*="bg-purple"],
+button[class*="from-purple"] {
+  color: white !important;
+}
+
+/* Ensure all inputs have visible text */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+  color: #1f2937 !important;
+  background-color: white !important;
+}
+
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+  color: #6b7280 !important;
+}
+
 .glass-effect {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
