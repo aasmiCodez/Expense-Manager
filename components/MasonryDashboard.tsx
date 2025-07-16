@@ -273,7 +273,7 @@ export default function MasonryDashboard() {
   const renderMasonryItem = (item: any) => {
     const baseClasses = `
       masonry-item
-      bg-slate-800/90 backdrop-blur-xl rounded-3xl 
+      bg-white/90 backdrop-blur-xl rounded-3xl 
       border border-purple-500/30 hover:border-purple-500/60
       transition-all duration-500 hover:scale-[1.02] 
       relative overflow-hidden group cursor-pointer
@@ -346,7 +346,7 @@ export default function MasonryDashboard() {
                         ₹{category.amount.toLocaleString()}
                       </span>
                     </div>
-                    <div className="w-full bg-slate-700/50 rounded-full h-2">
+                    <div className="w-full bg-purple-100 rounded-full h-2">
                       <div
                         className="h-2 rounded-full"
                         style={{
@@ -382,7 +382,7 @@ export default function MasonryDashboard() {
                 {item.transactions.map((transaction: any, index: number) => (
                   <div
                     key={index}
-                    className="flex items-center justify-between p-3 bg-slate-700/30 rounded-xl"
+                    className="flex items-center justify-between p-3 bg-purple-50 rounded-xl"
                   >
                     <div className="flex items-center space-x-3">
                       <div className="w-10 h-10 bg-gradient-to-r from-slate-600 to-slate-500 rounded-full flex items-center justify-center text-purple-400">
@@ -439,7 +439,7 @@ export default function MasonryDashboard() {
                     {item.current} of {item.target}
                   </div>
                 </div>
-                <div className="w-full bg-slate-700/50 rounded-full h-3">
+                <div className="w-full bg-purple-100 rounded-full h-3">
                   <div
                     className="h-3 rounded-full bg-gradient-to-r from-cyan-400 to-cyan-600"
                     style={{ width: item.value }}
@@ -485,7 +485,7 @@ export default function MasonryDashboard() {
                     {item.remaining}
                   </span>
                 </div>
-                <div className="w-full bg-slate-700/50 rounded-full h-2 mt-4">
+                <div className="w-full bg-purple-100 rounded-full h-2 mt-4">
                   <div
                     className="h-2 rounded-full bg-gradient-to-r from-amber-400 to-amber-600"
                     style={{ width: "81%" }}
@@ -560,7 +560,7 @@ export default function MasonryDashboard() {
                         {investment.value}
                       </span>
                     </div>
-                    <div className="w-full bg-slate-700/50 rounded-full h-2">
+                    <div className="w-full bg-purple-100 rounded-full h-2">
                       <div
                         className="h-2 rounded-full bg-gradient-to-r from-violet-400 to-violet-600"
                         style={{ width: `${investment.percentage}%` }}
@@ -595,7 +595,7 @@ export default function MasonryDashboard() {
           </p>
         </div>
 
-        <div className="flex items-center space-x-2 bg-slate-800/80 backdrop-blur-lg rounded-xl border border-purple-500/30 shadow-2xl p-1 animate-slide-in-right relative overflow-hidden">
+        <div className="flex items-center space-x-2 bg-white/90 backdrop-blur-lg rounded-xl border border-purple-500/30 shadow-2xl p-1 animate-slide-in-right relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-xl"></div>
           {["week", "month", "year"].map((period) => (
             <button
