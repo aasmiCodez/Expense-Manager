@@ -11,6 +11,7 @@ export default function LoginPage() {
     password: "",
   });
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const { login, signup, isLoading } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
