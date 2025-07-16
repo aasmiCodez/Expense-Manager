@@ -81,7 +81,7 @@ export default function Settings() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Full Name
                 </label>
                 <input
@@ -96,7 +96,7 @@ export default function Settings() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Email Address
                 </label>
                 <input
@@ -111,7 +111,7 @@ export default function Settings() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Default Currency
                 </label>
                 <select
@@ -130,7 +130,7 @@ export default function Settings() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Language
                 </label>
                 <select
