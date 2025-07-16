@@ -333,25 +333,32 @@ button[class*="from-purple"] {
   color: white !important;
 }
 
-/* Ensure all inputs have visible text */
+/* Ensure all inputs have visible dark text */
 input[type="text"],
 input[type="number"],
 input[type="email"],
 input[type="password"],
 input[type="date"],
+input[type="datetime-local"],
+input[type="time"],
+input[type="month"],
+input[type="week"],
 select,
 textarea {
-  color: #000000 !important;
-  background-color: white !important;
+  color: #111827 !important;
+  background-color: #ffffff !important;
+  font-weight: 600 !important;
+  border: 1px solid #d1d5db !important;
 }
 
 input::placeholder,
 select::placeholder,
 textarea::placeholder {
   color: #6b7280 !important;
+  font-weight: 400 !important;
 }
 
-/* Force all text to be black */
+/* Force all text to be dark and visible */
 body,
 p,
 span,
@@ -363,47 +370,99 @@ h4,
 h5,
 h6,
 label,
-a,
-button {
-  color: #000000 !important;
+a {
+  color: #1f2937 !important;
+  font-weight: 500 !important;
 }
 
-/* Force all text classes to be black */
+/* Make headings bold and very dark */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111827 !important;
+  font-weight: 700 !important;
+}
+
+/* Force all text classes to be dark */
 .text-gray-700,
 .text-gray-600,
 .text-gray-500,
 .text-gray-800,
-.text-gray-900 {
-  color: #000000 !important;
+.text-gray-900,
+.text-white {
+  color: #1f2937 !important;
+  font-weight: 500 !important;
 }
 
-/* Specific overrides for date inputs */
-input[type="date"]::-webkit-datetime-edit,
-input[type="date"]::-webkit-datetime-edit-text,
+/* Labels should be bold and dark */
+label {
+  color: #111827 !important;
+  font-weight: 600 !important;
+}
+
+/* Button text inside buttons should remain as intended */
+button {
+  font-weight: 600 !important;
+}
+
+/* Comprehensive date input fixes */
+input[type="date"],
+input[type="datetime-local"],
+input[type="time"],
+input[type="month"],
+input[type="week"] {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+  color-scheme: light !important;
+  font-weight: 600 !important;
+}
+
+/* Chrome/Safari date input parts */
+input[type="date"]::-webkit-datetime-edit {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+input[type="date"]::-webkit-datetime-edit-text {
+  color: #1f2937 !important;
+  font-weight: 600 !important;
+}
+
 input[type="date"]::-webkit-datetime-edit-month-field,
 input[type="date"]::-webkit-datetime-edit-day-field,
 input[type="date"]::-webkit-datetime-edit-year-field {
-  color: #000000 !important;
-  background-color: white !important;
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+  font-weight: 700 !important;
+  padding: 2px !important;
 }
 
-/* Firefox date input */
-input[type="date"] {
-  color-scheme: light !important;
-  background-color: white !important;
-  color: #000000 !important;
-}
-
-/* Chrome date input parts */
 input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(0) !important;
-  background-color: white !important;
+  filter: invert(0) contrast(1) !important;
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
 }
 
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-clear-button {
-  color: #000000 !important;
-  background-color: white !important;
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+  filter: invert(0) !important;
+}
+
+/* Firefox date input specific */
+input[type="date"] {
+  -moz-appearance: textfield !important;
+}
+
+input[type="date"]::-moz-focus-inner {
+  border: 0 !important;
+  color: #1f2937 !important;
+  font-weight: 600 !important;
 }
 
 /* Sidebar hover fix */
