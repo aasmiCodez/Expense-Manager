@@ -93,7 +93,7 @@ export default function LoginPage() {
                   type="button"
                   onClick={handleDemoLogin}
                   disabled={isLoading}
-                  className="text-xs text-purple-400 hover:text-purple-300 font-medium disabled:text-slate-500 disabled:cursor-not-allowed"
+                  className="text-xs text-purple-600 hover:text-purple-500 font-medium disabled:text-gray-400 disabled:cursor-not-allowed"
                 >
                   Use Demo →
                 </button>
