@@ -508,6 +508,18 @@ button[class*="from-purple"],
   font-weight: 600 !important;
 }
 
+/* Period selector buttons - active should be white, inactive should be dark */
+button[class*="from-purple-600"] {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Inactive period selector buttons */
+button:not([class*="bg-purple"]):not([class*="from-purple"]) {
+  color: #111827 !important;
+  font-weight: 600 !important;
+}
+
 /* Ensure strong contrast for important text */
 .font-bold,
 .font-semibold,
