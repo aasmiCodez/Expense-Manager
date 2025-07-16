@@ -105,7 +105,7 @@ export default function Analytics() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Monthly Trend */}
-        <div className="bg-white rounded-xl shadow-sm border">
+        <div className="bg-white rounded-xl shadow-sm border card animate-scale-in">
           <div className="p-6 border-b">
             <h3 className="text-lg font-semibold text-gray-900">
               Income vs Expenses
@@ -143,7 +143,7 @@ export default function Analytics() {
         </div>
 
         {/* Category Breakdown */}
-        <div className="bg-white rounded-xl shadow-sm border">
+        <div className="bg-white rounded-xl shadow-sm border card animate-scale-in">
           <div className="p-6 border-b">
             <h3 className="text-lg font-semibold text-gray-900">
               Spending by Category
@@ -189,7 +189,7 @@ export default function Analytics() {
       </div>
 
       {/* Detailed Stats */}
-      <div className="bg-white rounded-xl shadow-sm border">
+      <div className="bg-white rounded-xl shadow-sm border card animate-scale-in">
         <div className="p-6 border-b">
           <h3 className="text-lg font-semibold text-gray-900">
             Detailed Statistics
