@@ -391,7 +391,7 @@ export default function Budget() {
 
       {/* Add Budget Modal */}
       {showAddForm && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 animate-fade-in-up">
+        <div className="fixed inset-0 bg-white bg-opacity-50 flex items-center justify-center p-4 z-50 animate-fade-in-up">
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md transform transition-all duration-300 animate-scale-in border border-gray-200">
             <div className="p-6 bg-white rounded-2xl">
               <h3 className="text-lg font-semibold text-gray-900 mb-6">
