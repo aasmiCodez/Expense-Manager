@@ -294,7 +294,7 @@ export default function Budget() {
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-3">
-                  <div className="p-3 bg-blue-50 rounded-lg text-blue-600">
+                  <div className="p-3 bg-purple-50 rounded-lg text-purple-600">
                     {budget.icon}
                   </div>
                   <div>
@@ -390,7 +390,7 @@ export default function Budget() {
                     onChange={(e) =>
                       setNewBudget({ ...newBudget, category: e.target.value })
                     }
-                    className="modern-input"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900 placeholder-gray-500 bg-white"
                     placeholder="e.g., Groceries"
                     required
                   />
@@ -405,7 +405,7 @@ export default function Budget() {
                     onChange={(e) =>
                       setNewBudget({ ...newBudget, amount: e.target.value })
                     }
-                    className="modern-input"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900 placeholder-gray-500 bg-white"
                     placeholder="0"
                     required
                   />
@@ -414,13 +414,13 @@ export default function Budget() {
                   <button
                     type="button"
                     onClick={() => setShowAddForm(false)}
-                    className="flex-1 px-4 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition-all duration-200 font-medium"
+                    className="flex-1 px-4 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition-all duration-200 font-medium text-gray-700 bg-white"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
-                    className="btn-primary flex-1 px-4 py-3 font-medium"
+                    className="flex-1 px-4 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl hover:from-purple-700 hover:to-purple-800 transition-all duration-200 font-medium shadow-lg"
                   >
                     Add Budget
                   </button>
@@ -432,7 +432,7 @@ export default function Budget() {
       )}
 
       {/* Budget Insights */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-white">
+      <div className="bg-gradient-to-r from-purple-600 to-purple-800 rounded-xl p-6 text-white">
         <div className="flex items-center space-x-3 mb-4">
           <svg
             className="w-6 h-6"
