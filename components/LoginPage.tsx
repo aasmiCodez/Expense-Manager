@@ -50,7 +50,7 @@ export default function LoginPage() {
         style={{ animationDelay: "4s" }}
       ></div>
       <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all duration-300 hover:scale-105 border border-purple-300 relative z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10 rounded-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-purple-400/5 to-purple-300/5 rounded-3xl"></div>
         {/* Header */}
         <div className="bg-gradient-to-r from-purple-600 to-purple-700 p-8 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-blue-400/20 animate-pulse"></div>
