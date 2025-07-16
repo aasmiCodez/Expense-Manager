@@ -289,25 +289,52 @@ export default function Dashboard() {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-xl shadow-sm border hover:shadow-md transition-all duration-200 hover:scale-105 card animate-scale-in"
+            className="bg-slate-800/80 backdrop-blur-xl p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-400 hover:scale-105 card animate-scale-in relative overflow-hidden group"
           >
-            <div className="flex items-center justify-between mb-4">
-              <div
-                className={`p-3 rounded-lg bg-${stat.color}-100 text-${stat.color}-600`}
-              >
-                {stat.icon}
-              </div>
-              <div
-                className={`text-sm font-medium ${
-                  stat.trend === "up" ? "text-green-600" : "text-red-600"
-                }`}
-              >
-                {stat.change}
+            {/* Animated background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
+            <div className="relative z-10">
+              <div className="flex items-center justify-between mb-6">
+                <div
+                  className={`p-4 rounded-xl bg-gradient-to-r ${
+                    stat.color === "purple"
+                      ? "from-purple-500 to-purple-700"
+                      : stat.color === "red"
+                        ? "from-red-500 to-red-700"
+                        : stat.color === "green"
+                          ? "from-green-500 to-green-700"
+                          : "from-purple-500 to-purple-700"
+                  } shadow-lg`}
+                  style={{
+                    filter: `drop-shadow(0 0 10px rgba(147, 51, 234, 0.4))`,
+                  }}
+                >
+                  <div className="text-white">{stat.icon}</div>
+                </div>
+                <div
+                  className={`px-3 py-2 rounded-full text-sm font-bold backdrop-blur-sm ${
+                    stat.trend === "up"
+                      ? "bg-green-500/20 text-green-400 border border-green-500/30"
+                      : "bg-red-500/20 text-red-400 border border-red-500/30"
+                  }`}
+                  style={{
+                    boxShadow:
+                      stat.trend === "up"
+                        ? "0 0 10px rgba(34, 197, 94, 0.3)"
+                        : "0 0 10px rgba(239, 68, 68, 0.3)",
+                  }}
+                >
+                  {stat.change}
+                </div>
               </div>
             </div>
-            <div className="mt-4">
-              <h3 className="text-2xl font-bold text-gray-900">{stat.value}</h3>
-              <p className="text-gray-600 text-sm mt-1">{stat.label}</p>
+            <div className="mt-4 relative z-10">
+              <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent">
+                {stat.value}
+              </h3>
+              <p className="text-slate-300 text-sm mt-2 font-medium">
+                {stat.label}
+              </p>
             </div>
           </div>
         ))}
