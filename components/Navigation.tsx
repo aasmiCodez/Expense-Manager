@@ -168,15 +168,19 @@ export default function Navigation({
 
       {/* Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 bg-white/95 backdrop-blur-xl shadow-2xl transform transition-all duration-300 ease-out lg:transform-none lg:shadow-lg ${sidebarCollapsed ? "w-20 lg:w-20" : "w-72 lg:w-64"} ${
+        className={`fixed inset-y-0 left-0 z-50 bg-slate-800/95 backdrop-blur-xl shadow-2xl border-r border-purple-500/30 transform transition-all duration-300 ease-out lg:transform-none lg:shadow-lg ${sidebarCollapsed ? "w-20 lg:w-20" : "w-72 lg:w-64"} ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0`}
       >
         {/* Header */}
-        <div className="flex items-center px-6 py-6 border-b bg-gradient-to-r from-purple-50 to-white relative">
-          <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-purple-800 rounded-xl flex items-center justify-center shadow-lg animate-float">
+        <div className="flex items-center px-6 py-6 border-b border-purple-500/30 bg-gradient-to-r from-slate-800 to-slate-700 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-pink-500/10 animate-pulse"></div>
+          <div
+            className="relative z-10 w-12 h-12 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-xl flex items-center justify-center shadow-lg animate-float"
+            style={{ filter: "drop-shadow(0 0 15px rgba(147, 51, 234, 0.6))" }}
+          >
             <svg
-              className="w-6 h-6 text-white"
+              className="w-7 h-7 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
