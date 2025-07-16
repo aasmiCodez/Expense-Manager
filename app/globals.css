@@ -497,9 +497,12 @@ h6 {
 /* Force white text and icons on purple gradient backgrounds */
 [style*="background: linear-gradient"] *,
 [style*="background-image: linear-gradient"] *,
+[style*="linear-gradient(to right, rgb(147, 51, 234)"] *,
+[style*="linear-gradient(135deg, rgb(147, 51, 234)"] *,
 [class*="bg-gradient-to-r"][class*="purple"] *,
 [class*="from-purple"] * {
   color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 /* Specific overrides for common elements on purple backgrounds */
