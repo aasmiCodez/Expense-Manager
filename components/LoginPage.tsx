@@ -86,7 +86,7 @@ export default function LoginPage() {
           {!isSignUp && (
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-6 backdrop-blur-sm">
               <div className="flex items-center justify-between mb-2">
-                <p className="text-sm font-medium text-purple-300">
+                <p className="text-sm font-medium text-purple-700">
                   Demo Credentials
                 </p>
                 <button
@@ -98,10 +98,10 @@ export default function LoginPage() {
                   Use Demo →
                 </button>
               </div>
-              <p className="text-xs text-purple-300">
+              <p className="text-xs text-purple-700">
                 Email: aasmi@example.com
               </p>
-              <p className="text-xs text-purple-300">Password: password123</p>
+              <p className="text-xs text-purple-700">Password: password123</p>
             </div>
           )}
 
@@ -124,7 +124,7 @@ export default function LoginPage() {
                     setFormData({ ...formData, name: e.target.value })
                   }
                   disabled={isLoading}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
                   placeholder="Enter your full name"
                   required
                 />
@@ -142,7 +142,7 @@ export default function LoginPage() {
                   setFormData({ ...formData, email: e.target.value })
                 }
                 disabled={isLoading}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
                 placeholder="Enter your email"
                 required
               />
@@ -159,7 +159,7 @@ export default function LoginPage() {
                   setFormData({ ...formData, password: e.target.value })
                 }
                 disabled={isLoading}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
                 placeholder="Enter your password"
                 required
               />
