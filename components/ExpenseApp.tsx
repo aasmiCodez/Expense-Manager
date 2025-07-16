@@ -20,11 +20,31 @@ export default function ExpenseApp() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100 flex items-center justify-center safe-area-top safe-area-bottom">
-        <div className="text-center p-8 bg-white/70 backdrop-blur-xl rounded-2xl shadow-xl card animate-scale-in">
-          <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-6" />
-          <p className="text-black font-medium">Checking authentication...</p>
-          <p className="text-gray-500 text-sm mt-2">Please wait a moment</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center safe-area-top safe-area-bottom relative overflow-hidden">
+        {/* Animated background orbs */}
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "4s" }}
+        ></div>
+        <div className="text-center p-8 bg-slate-800/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-purple-500/30 animate-scale-in relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-pink-500/10 animate-pulse"></div>
+          <div className="relative z-10">
+            <div
+              className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-6 shadow-lg"
+              style={{
+                filter: "drop-shadow(0 0 10px rgba(147, 51, 234, 0.5))",
+              }}
+            />
+            <p className="text-white font-semibold text-lg">
+              Checking authentication...
+            </p>
+            <p className="text-slate-300 text-sm mt-2">Please wait a moment</p>
+          </div>
         </div>
       </div>
     );
@@ -52,7 +72,19 @@ export default function ExpenseApp() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-purple-50 to-purple-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "3s" }}
+        ></div>
+        <div
+          className="absolute top-1/2 right-1/4 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "6s" }}
+        ></div>
+      </div>
       <Navigation
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
@@ -65,7 +97,7 @@ export default function ExpenseApp() {
       <div
         className={`transition-all duration-300 ${sidebarCollapsed ? "lg:pl-20" : "lg:pl-64"}`}
       >
-        <main className="container p-4 sm:p-6 lg:p-8 animate-fade-in-up safe-area-top safe-area-bottom">
+        <main className="container p-4 sm:p-6 lg:p-8 animate-fade-in-up safe-area-top safe-area-bottom relative z-10">
           <div className="max-w-7xl mx-auto">{renderPage()}</div>
         </main>
       </div>
