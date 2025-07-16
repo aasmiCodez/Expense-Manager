@@ -7,6 +7,8 @@ interface NavigationProps {
   setCurrentPage: (page: any) => void;
   sidebarOpen: boolean;
   setSidebarOpen: (open: boolean) => void;
+  sidebarCollapsed: boolean;
+  setSidebarCollapsed: (collapsed: boolean) => void;
 }
 
 export default function Navigation({
@@ -14,6 +16,8 @@ export default function Navigation({
   setCurrentPage,
   sidebarOpen,
   setSidebarOpen,
+  sidebarCollapsed,
+  setSidebarCollapsed,
 }: NavigationProps) {
   const { user, logout } = useAuth();
 
