@@ -623,6 +623,33 @@ svg[class*="text-gray-700"] {
   fill: #374151 !important;
 }
 
+/* Navigation specific overrides */
+nav svg[class*="text-yellow-300"],
+header svg[class*="text-yellow-300"],
+.sidebar svg[class*="text-yellow-300"] {
+  color: #fde047 !important;
+  stroke: #fde047 !important;
+  fill: #fde047 !important;
+}
+
+/* Dashboard transaction icons */
+.recent-transactions svg,
+div[class*="Recent Transactions"] svg,
+div[class*="transaction"] svg {
+  color: #374151 !important;
+  stroke: #374151 !important;
+  fill: #374151 !important;
+}
+
+/* Sidebar navigation items */
+nav button:hover svg,
+.sidebar button:hover svg,
+button[class*="hover:bg-purple-100"]:hover svg {
+  color: #9333ea !important;
+  stroke: #9333ea !important;
+  fill: #9333ea !important;
+}
+
 /* Labels should be bold and gray */
 label {
   color: #374151 !important;
