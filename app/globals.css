@@ -466,9 +466,16 @@ h6 {
 .text-gray-600,
 .text-gray-500,
 .text-gray-800,
-.text-gray-900,
-.text-white {
+.text-gray-900 {
   color: #4b5563 !important;
+  font-weight: 700 !important;
+}
+
+/* Exception: text-white on purple backgrounds should remain white */
+.bg-gradient-to-r .text-white,
+[class*="bg-purple"] .text-white,
+[class*="from-purple"] .text-white {
+  color: #ffffff !important;
   font-weight: 700 !important;
 }
 
