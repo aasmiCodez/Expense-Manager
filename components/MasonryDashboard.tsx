@@ -277,7 +277,8 @@ export default function MasonryDashboard() {
       border border-purple-500/30 hover:border-purple-500/60
       transition-all duration-500 hover:scale-[1.02] 
       relative overflow-hidden group cursor-pointer
-      shadow-2xl hover:shadow-purple-500/25
+            shadow-2xl hover:shadow-purple-500/25
+      animate-scale-in
     `;
 
     const sizeClasses = {
