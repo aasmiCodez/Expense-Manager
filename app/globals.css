@@ -1024,13 +1024,22 @@ a {
   font-weight: 500 !important;
 }
 
-/* Final catch-all for any remaining white or invisible text */
+/* Final catch-all for bold grey text */
 * {
   color: inherit;
 }
 
 body * {
-  color: #1f2937;
+  color: #4b5563;
+  font-weight: 700;
+}
+
+/* Ensure all text is bold and grey by default */
+*:not(button):not(.btn-primary):not([class*="bg-purple"]):not(
+    [class*="from-purple"]
+  ):not([class*="bg-gradient"]) {
+  color: #4b5563 !important;
+  font-weight: 700 !important;
 }
 
 /* Specific overrides for problematic selectors */
@@ -1042,32 +1051,32 @@ body * {
   font-weight: 600 !important;
 }
 
-/* Make sure date-related text is always visible */
+/* Make sure date-related text is bold and grey */
 input[type="date"] *,
 input[type="date"]::before,
 input[type="date"]::after {
-  color: #111827 !important;
+  color: #374151 !important;
   background-color: #ffffff !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
 
-/* Ensure table and list text is visible */
+/* Ensure table and list text is bold and grey */
 table,
 td,
 th,
 li,
 ul,
 ol {
-  color: #1f2937 !important;
-  font-weight: 500 !important;
+  color: #4b5563 !important;
+  font-weight: 700 !important;
 }
 
-/* Form elements text visibility */
+/* Form elements text bold and grey */
 fieldset,
 legend,
 option {
-  color: #111827 !important;
-  font-weight: 500 !important;
+  color: #374151 !important;
+  font-weight: 700 !important;
   background-color: #ffffff !important;
 }
 
