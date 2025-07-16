@@ -28,16 +28,7 @@ export default function ExpenseApp() {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center safe-area-top safe-area-bottom relative overflow-hidden">
-        {/* Animated background orbs */}
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "4s" }}
-        ></div>
+        {/* Removed dark background orbs */}
         <div className="text-center p-8 bg-slate-800/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-purple-500/30 animate-scale-in relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-pink-500/10 animate-pulse"></div>
           <div className="relative z-10">
@@ -82,18 +73,7 @@ export default function ExpenseApp() {
 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "3s" }}
-        ></div>
-        <div
-          className="absolute top-1/2 right-1/4 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "6s" }}
-        ></div>
-      </div>
+      {/* Removed dark background elements */}
       <Navigation
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
