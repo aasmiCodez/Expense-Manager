@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import LoginPage from "./LoginPage";
 import Dashboard from "./Dashboard";
+import MasonryDashboard from "./MasonryDashboard";
 import AddExpense from "./AddExpense";
 import Analytics from "./Analytics";
 import Budget from "./Budget";
