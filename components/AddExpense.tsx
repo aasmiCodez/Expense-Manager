@@ -312,10 +312,12 @@ export default function AddExpense() {
                 onChange={(e) =>
                   setFormData({ ...formData, date: e.target.value })
                 }
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white"
+                className="w-full px-4 py-3 border-2 border-gray-400 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white"
                 style={{
-                  color: "#000000 !important",
-                  backgroundColor: "white !important",
+                  color: "#111827",
+                  backgroundColor: "#ffffff",
+                  fontWeight: "600",
+                  colorScheme: "light",
                 }}
               />
             </div>
