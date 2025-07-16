@@ -59,13 +59,13 @@ export default function ExpenseApp() {
       />
 
       <div className="lg:pl-64">
-        <main className="p-4 lg:p-8">{renderPage()}</main>
+        <main className="p-4 lg:p-8 animate-fade-in-up">{renderPage()}</main>
       </div>
 
       {/* Mobile sidebar overlay */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden transition-opacity duration-200"
           onClick={() => setSidebarOpen(false)}
         />
       )}
