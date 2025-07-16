@@ -93,7 +93,7 @@ export default function ExpenseApp() {
       {/* Enhanced Mobile sidebar overlay */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden transition-all duration-300 animate-fade-in-up"
+          className="fixed inset-0 bg-white/60 backdrop-blur-sm z-40 lg:hidden transition-all duration-300 animate-fade-in-up"
           onClick={() => setSidebarOpen(false)}
         />
       )}
