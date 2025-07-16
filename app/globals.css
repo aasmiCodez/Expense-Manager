@@ -528,6 +528,18 @@ h6 {
   stroke: #ffffff !important;
 }
 
+/* Override for any element with purple in background style */
+[style*="147, 51, 234"] *,
+[style*="168, 85, 247"] *,
+[style*="126, 34, 206"] *,
+[style*="rgb(147, 51, 234)"] *,
+[style*="rgb(168, 85, 247)"] *,
+[style*="rgb(126, 34, 206)"] * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  fill: #ffffff !important;
+}
+
 /* Labels should be bold and gray */
 label {
   color: #374151 !important;
