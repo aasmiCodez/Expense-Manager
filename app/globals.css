@@ -982,8 +982,56 @@ button[class*="from-purple"],
 }
 
 a {
-  color: inherit;
+  color: #1f2937 !important;
   text-decoration: none;
+  font-weight: 500 !important;
+}
+
+/* Final catch-all for any remaining white or invisible text */
+* {
+  color: inherit;
+}
+
+body * {
+  color: #1f2937;
+}
+
+/* Specific overrides for problematic selectors */
+[style*="color: rgb(255, 255, 255)"],
+[style*="color:rgb(255,255,255)"],
+[style*="color: rgba(255, 255, 255"],
+[style*="color:rgba(255,255,255"] {
+  color: #111827 !important;
+  font-weight: 600 !important;
+}
+
+/* Make sure date-related text is always visible */
+input[type="date"] *,
+input[type="date"]::before,
+input[type="date"]::after {
+  color: #111827 !important;
+  background-color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Ensure table and list text is visible */
+table,
+td,
+th,
+li,
+ul,
+ol {
+  color: #1f2937 !important;
+  font-weight: 500 !important;
+}
+
+/* Form elements text visibility */
+fieldset,
+legend,
+option {
+  color: #111827 !important;
+  font-weight: 500 !important;
+  background-color: #ffffff !important;
 }
 
 /* Enhanced mobile interactions */
