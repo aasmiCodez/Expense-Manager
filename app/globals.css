@@ -333,7 +333,7 @@ button[class*="from-purple"] {
   color: white !important;
 }
 
-/* Ensure all inputs have visible dark text */
+/* Ensure all inputs have visible bold grey text */
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -345,20 +345,20 @@ input[type="month"],
 input[type="week"],
 select,
 textarea {
-  color: #111827 !important;
+  color: #374151 !important;
   background-color: #ffffff !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   border: 1px solid #d1d5db !important;
 }
 
 input::placeholder,
 select::placeholder,
 textarea::placeholder {
-  color: #6b7280 !important;
-  font-weight: 400 !important;
+  color: #9ca3af !important;
+  font-weight: 500 !important;
 }
 
-/* Force all text to be dark and visible */
+/* Force all main text to be bold and grey */
 body,
 p,
 span,
@@ -371,41 +371,55 @@ h5,
 h6,
 label,
 a {
-  color: #1f2937 !important;
-  font-weight: 500 !important;
+  color: #4b5563 !important;
+  font-weight: 700 !important;
 }
 
-/* Make headings bold and very dark */
+/* Make headings extra bold and darker grey */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #111827 !important;
-  font-weight: 700 !important;
+  color: #374151 !important;
+  font-weight: 800 !important;
 }
 
-/* Force all text classes to be dark */
+/* Force all text classes to be grey and bold */
 .text-gray-700,
 .text-gray-600,
 .text-gray-500,
 .text-gray-800,
 .text-gray-900,
 .text-white {
-  color: #1f2937 !important;
-  font-weight: 500 !important;
+  color: #4b5563 !important;
+  font-weight: 700 !important;
 }
 
-/* Labels should be bold and dark */
+/* Labels should be bold and grey */
 label {
-  color: #111827 !important;
-  font-weight: 600 !important;
+  color: #374151 !important;
+  font-weight: 700 !important;
 }
 
 /* Button text inside buttons should remain as intended */
 button {
+  font-weight: 700 !important;
+}
+
+/* Specific grey colors for different text elements */
+.text-sm,
+.text-xs {
+  color: #6b7280 !important;
   font-weight: 600 !important;
+}
+
+/* Main content text */
+.text-base,
+.text-lg {
+  color: #4b5563 !important;
+  font-weight: 700 !important;
 }
 
 /* Comprehensive date input fixes */
