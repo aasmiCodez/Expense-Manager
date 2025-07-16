@@ -237,7 +237,7 @@ export default function AddExpense() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Add Expense Form */}
-        <div className="bg-white rounded-xl shadow-sm border p-6">
+        <div className="bg-white rounded-xl shadow-sm border p-6 card animate-scale-in">
           <h2 className="text-lg font-semibold text-gray-900 mb-6">
             New Expense
           </h2>
@@ -333,7 +333,7 @@ export default function AddExpense() {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              className="btn-primary w-full py-3 px-4 font-medium"
             >
               Add Expense
             </button>
@@ -341,7 +341,7 @@ export default function AddExpense() {
         </div>
 
         {/* Recent Expenses */}
-        <div className="bg-white rounded-xl shadow-sm border">
+        <div className="bg-white rounded-xl shadow-sm border card animate-scale-in">
           <div className="p-6 border-b">
             <h3 className="text-lg font-semibold text-gray-900">
               Recent Expenses
@@ -373,7 +373,7 @@ export default function AddExpense() {
       </div>
 
       {/* Quick Add Categories */}
-      <div className="bg-white rounded-xl shadow-sm border p-6">
+      <div className="bg-white rounded-xl shadow-sm border p-6 card animate-scale-in">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Add</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3">
           {categories.map((category) => (
