@@ -182,7 +182,7 @@ export default function Navigation({
             style={{ filter: "drop-shadow(0 0 15px rgba(147, 51, 234, 0.6))" }}
           >
             <svg
-              className="w-7 h-7 text-white"
+              className="w-7 h-7 text-yellow-300"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
