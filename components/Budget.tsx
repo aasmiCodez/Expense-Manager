@@ -223,7 +223,7 @@ export default function Budget() {
             Overall Budget
           </h3>
           <svg
-            className="w-6 h-6 text-blue-600"
+            className="w-6 h-6 text-purple-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
