@@ -49,7 +49,7 @@ export default function LoginPage() {
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-pulse"
         style={{ animationDelay: "4s" }}
       ></div>
-      <div className="bg-slate-800/90 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all duration-300 hover:scale-105 border border-purple-500/30 relative z-10">
+      <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all duration-300 hover:scale-105 border border-purple-300 relative z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10 rounded-3xl"></div>
         {/* Header */}
         <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 p-8 text-center relative overflow-hidden">
