@@ -1177,6 +1177,159 @@ option {
   background-color: #ffffff !important;
 }
 
+/* Pinterest-Style Masonry Layout */
+.masonry-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Mobile masonry */
+@media (max-width: 768px) {
+  .masonry-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Tablet masonry */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .masonry-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+/* Desktop masonry */
+@media (min-width: 1025px) {
+  .masonry-container {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Large desktop masonry */
+@media (min-width: 1440px) {
+  .masonry-container {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+/* Masonry item sizes */
+.masonry-item {
+  break-inside: avoid;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.masonry-small {
+  min-height: 200px;
+}
+
+.masonry-medium {
+  min-height: 300px;
+}
+
+.masonry-large {
+  min-height: 450px;
+}
+
+/* Responsive masonry heights */
+@media (max-width: 768px) {
+  .masonry-small {
+    min-height: 180px;
+  }
+
+  .masonry-medium {
+    min-height: 250px;
+  }
+
+  .masonry-large {
+    min-height: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-small {
+    min-height: 220px;
+  }
+
+  .masonry-medium {
+    min-height: 320px;
+  }
+
+  .masonry-large {
+    min-height: 480px;
+  }
+}
+
+/* Masonry hover effects */
+.masonry-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(147, 51, 234, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: rgba(147, 51, 234, 0.6);
+}
+
+.masonry-item:hover::before {
+  opacity: 1;
+}
+
+/* Beautiful gradient overlays */
+.masonry-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(147, 51, 234, 0.1) 0%,
+    rgba(59, 130, 246, 0.05) 50%,
+    rgba(236, 72, 153, 0.1) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.masonry-item > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Masonry animation delays for staggered effect */
+.masonry-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.masonry-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.masonry-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.masonry-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.masonry-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.masonry-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.masonry-item:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.masonry-item:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
 /* Enhanced mobile interactions */
 .mobile-enhanced {
   -webkit-tap-highlight-color: transparent;
