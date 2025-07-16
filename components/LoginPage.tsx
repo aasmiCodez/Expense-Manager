@@ -53,7 +53,7 @@ export default function LoginPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-purple-400/5 to-purple-300/5 rounded-3xl"></div>
         {/* Header */}
         <div className="bg-gradient-to-r from-purple-600 to-purple-700 p-8 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-blue-400/20 animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-purple-500/20 animate-pulse"></div>
           <div
             className="w-18 h-18 bg-white/20 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-4 relative z-10 shadow-xl"
             style={{ filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.3))" }}
