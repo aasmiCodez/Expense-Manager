@@ -144,7 +144,9 @@ export default function Navigation({
               />
             </svg>
           </div>
-          <h1 className="text-xl font-bold text-gray-900">ExpenseTracker</h1>
+          <h1 className="text-xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
+            ExpenseTracker
+          </h1>
         </div>
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -195,10 +197,10 @@ export default function Navigation({
           </div>
           {!sidebarCollapsed && (
             <div className="ml-3">
-              <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
                 ExpenseTracker
               </span>
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-slate-300 mt-1">
                 Modern Finance Management
               </p>
             </div>
@@ -206,7 +208,7 @@ export default function Navigation({
           {/* Collapse Toggle - Desktop Only */}
           <button
             onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-            className="hidden lg:flex absolute -right-3 top-1/2 transform -translate-y-1/2 w-6 h-6 bg-white border border-gray-200 rounded-full items-center justify-center hover:bg-gray-50 transition-colors shadow-md"
+            className="hidden lg:flex absolute -right-3 top-1/2 transform -translate-y-1/2 w-7 h-7 bg-slate-700 border border-purple-500/50 rounded-full items-center justify-center hover:bg-slate-600 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
           >
             <svg
               className={`w-3 h-3 text-gray-600 transition-transform duration-200 ${sidebarCollapsed ? "rotate-180" : ""}`}
