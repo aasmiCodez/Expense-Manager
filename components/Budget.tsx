@@ -374,14 +374,14 @@ export default function Budget() {
       {/* Add Budget Modal */}
       {showAddForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 animate-fade-in-up">
-          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md transform transition-all duration-300 animate-scale-in">
-            <div className="p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+          <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md transform transition-all duration-300 animate-scale-in border border-gray-200">
+            <div className="p-6 bg-white rounded-2xl">
+              <h3 className="text-lg font-semibold text-gray-900 mb-6">
                 Add New Budget
               </h3>
               <form onSubmit={handleAddBudget} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-900 mb-2">
                     Category
                   </label>
                   <input
@@ -396,7 +396,7 @@ export default function Budget() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-900 mb-2">
                     Budget Amount (₹)
                   </label>
                   <input
