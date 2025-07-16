@@ -16,6 +16,7 @@ export default function ExpenseApp() {
   const { isAuthenticated, isLoading } = useAuth();
   const [currentPage, setCurrentPage] = useState<Page>("dashboard");
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   if (isLoading) {
     return (
@@ -59,9 +60,13 @@ export default function ExpenseApp() {
         setCurrentPage={setCurrentPage}
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
+        sidebarCollapsed={sidebarCollapsed}
+        setSidebarCollapsed={setSidebarCollapsed}
       />
 
-      <div className="lg:pl-64 transition-all duration-300">
+      <div
+        className={`transition-all duration-300 ${sidebarCollapsed ? "lg:pl-20" : "lg:pl-64"}`}
+      >
         <main className="container p-4 sm:p-6 lg:p-8 animate-fade-in-up safe-area-top safe-area-bottom">
           <div className="max-w-7xl mx-auto">{renderPage()}</div>
         </main>
