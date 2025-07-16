@@ -251,9 +251,9 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div className="space-y-6 lg:space-y-8">
+      {/* Modern Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 lg:gap-6">
         <div>
           <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">
             Welcome back, {user?.name || "User"}!
@@ -263,7 +263,7 @@ export default function Dashboard() {
           </p>
         </div>
 
-        <div className="flex items-center space-x-2 bg-white rounded-lg border p-1">
+        <div className="flex items-center space-x-2 bg-white/80 backdrop-blur-lg rounded-xl border shadow-lg p-1 animate-slide-in-right">
           {["week", "month", "year"].map((period) => (
             <button
               key={period}
@@ -280,8 +280,8 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Modern Stats Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {stats.map((stat, index) => (
           <div
             key={index}
@@ -309,7 +309,7 @@ export default function Dashboard() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
         {/* Recent Transactions */}
         <div className="bg-white rounded-xl shadow-sm border card animate-scale-in">
           <div className="p-6 border-b">
