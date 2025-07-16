@@ -129,7 +129,7 @@ export default function Navigation({
       {/* Modern Mobile header */}
       <div className="lg:hidden bg-white/90 backdrop-blur-lg shadow-sm border-b px-4 py-4 flex items-center justify-between sticky-header safe-area-top">
         <div className="flex items-center space-x-3">
-          <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
             <svg
               className="w-5 h-5 text-white"
               fill="none"
@@ -247,34 +247,76 @@ export default function Navigation({
         </div>
 
         {/* Navigation */}
-        <nav className="px-4 py-4">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => {
-                setCurrentPage(item.id);
-                setSidebarOpen(false);
-              }}
-              className={`w-full flex items-center px-3 py-3 rounded-lg mb-1 transition-all duration-200 hover:scale-105 ${
-                currentPage === item.id
-                  ? "bg-blue-50 text-blue-600 border-r-2 border-blue-600"
-                  : "text-gray-700 hover:bg-gray-100"
-              }`}
-            >
-              <div className="mr-3">{item.icon}</div>
-              <span className="font-medium">{item.label}</span>
-            </button>
-          ))}
+        <nav className="px-4 py-6 flex-1">
+          <div className="space-y-2">
+            {navItems.map((item, index) => (
+              <button
+                key={item.id}
+                onClick={() => {
+                  setCurrentPage(item.id);
+                  setSidebarOpen(false);
+                }}
+                className={`w-full flex items-center ${sidebarCollapsed ? "px-2 py-4 justify-center" : "px-4 py-4"} rounded-xl transition-all duration-300 hover:scale-105 animate-slide-in-left ${
+                  currentPage === item.id
+                    ? "bg-gradient-to-r from-purple-50 to-purple-100 text-purple-600 shadow-md border border-purple-200"
+                    : "text-gray-700 hover:bg-gray-50 hover:shadow-sm"
+                }`}
+                style={{ animationDelay: `${index * 50}ms` }}
+                title={sidebarCollapsed ? item.label : ""}
+              >
+                <div
+                  className={`${sidebarCollapsed ? "" : "mr-4"} p-2 rounded-lg transition-colors ${
+                    currentPage === item.id
+                      ? "bg-purple-100 text-purple-600"
+                      : "bg-gray-100 text-gray-500 group-hover:bg-gray-200"
+                  }`}
+                >
+                  {item.icon}
+                </div>
+                {!sidebarCollapsed && (
+                  <>
+                    <span className="font-medium">{item.label}</span>
+                    {currentPage === item.id && (
+                      <div className="ml-auto w-2 h-2 bg-purple-600 rounded-full animate-pulse"></div>
+                    )}
+                  </>
+                )}
+              </button>
+            ))}
+          </div>
         </nav>
 
         {/* Logout button */}
-        <div className="absolute bottom-4 left-4 right-4">
+        <div className="absolute bottom-6 left-4 right-4 safe-area-bottom">
+          {!sidebarCollapsed && (
+            <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-3 mb-4">
+              <div className="flex items-center space-x-2">
+                <svg
+                  className="w-4 h-4 text-orange-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
+                  />
+                </svg>
+                <span className="text-xs text-orange-700 font-medium">
+                  Remember to track your expenses!
+                </span>
+              </div>
+            </div>
+          )}
           <button
             onClick={logout}
-            className="w-full flex items-center px-3 py-3 rounded-lg text-red-600 hover:bg-red-50 transition-colors"
+            className={`w-full flex items-center ${sidebarCollapsed ? "justify-center px-2" : "justify-center px-4"} py-4 rounded-xl text-red-600 hover:bg-red-50 transition-all duration-200 hover:scale-105 border border-red-200 hover:border-red-300`}
+            title={sidebarCollapsed ? "Sign Out" : ""}
           >
             <svg
-              className="w-5 h-5 mr-3"
+              className={`w-5 h-5 ${sidebarCollapsed ? "" : "mr-3"}`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -286,7 +328,7 @@ export default function Navigation({
                 d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
               />
             </svg>
-            <span className="font-medium">Logout</span>
+            {!sidebarCollapsed && <span className="font-medium">Sign Out</span>}
           </button>
         </div>
       </div>
