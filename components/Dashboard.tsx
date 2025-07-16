@@ -290,7 +290,7 @@ export default function Dashboard() {
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="bg-slate-800/80 backdrop-blur-xl p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-400 hover:scale-105 card animate-scale-in relative overflow-hidden group"
+            className="bg-white/90 backdrop-blur-xl p-6 rounded-2xl border border-purple-500/30 hover:border-purple-500/50 transition-all duration-400 hover:scale-105 card animate-scale-in relative overflow-hidden group"
           >
             {/* Animated background gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
@@ -330,10 +330,8 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="mt-4 relative z-10">
-              <h3 className="text-3xl font-bold bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent">
-                {stat.value}
-              </h3>
-              <p className="text-slate-300 text-sm mt-2 font-medium">
+              <h3 className="text-3xl font-bold text-gray-900">{stat.value}</h3>
+              <p className="text-gray-600 text-sm mt-2 font-medium">
                 {stat.label}
               </p>
             </div>
@@ -346,7 +344,7 @@ export default function Dashboard() {
         <div className="bg-slate-800/80 backdrop-blur-xl rounded-2xl border border-purple-500/30 card animate-scale-in relative overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-blue-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-400"></div>
           <div className="p-6 border-b border-purple-500/30 relative z-10">
-            <h3 className="text-lg font-semibold bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent">
+            <h3 className="text-lg font-semibold text-gray-900">
               Recent Transactions
             </h3>
           </div>
@@ -365,7 +363,7 @@ export default function Dashboard() {
                       <p className="font-semibold text-white">
                         {transaction.description}
                       </p>
-                      <p className="text-sm text-slate-300">
+                      <p className="text-sm text-gray-600">
                         {transaction.category} • {transaction.date}
                       </p>
                     </div>
