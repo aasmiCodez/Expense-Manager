@@ -38,10 +38,10 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4 animate-fade-in-up">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100 flex items-center justify-center p-4 animate-fade-in-up">
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all duration-300 hover:scale-105">
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-center">
+        <div className="bg-gradient-to-r from-purple-600 to-purple-800 p-8 text-center">
           <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <svg
               className="w-10 h-10 text-white"
@@ -60,7 +60,7 @@ export default function LoginPage() {
           <h1 className="text-2xl font-bold text-white mb-2">
             {isSignUp ? "Create Account" : "Welcome Back"}
           </h1>
-          <p className="text-blue-100">
+          <p className="text-purple-100">
             {isSignUp ? "Join ExpenseTracker today" : "Sign in to your account"}
           </p>
         </div>
@@ -69,22 +69,24 @@ export default function LoginPage() {
         <div className="p-8">
           {/* Demo credentials */}
           {!isSignUp && (
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-6">
               <div className="flex items-center justify-between mb-2">
-                <p className="text-sm font-medium text-blue-800">
+                <p className="text-sm font-medium text-purple-800">
                   Demo Credentials
                 </p>
                 <button
                   type="button"
                   onClick={handleDemoLogin}
                   disabled={isLoading}
-                  className="text-xs text-blue-600 hover:text-blue-700 font-medium disabled:text-gray-400 disabled:cursor-not-allowed"
+                  className="text-xs text-purple-600 hover:text-purple-700 font-medium disabled:text-gray-400 disabled:cursor-not-allowed"
                 >
                   Use Demo →
                 </button>
               </div>
-              <p className="text-xs text-blue-600">Email: aasmi@example.com</p>
-              <p className="text-xs text-blue-600">Password: password123</p>
+              <p className="text-xs text-purple-600">
+                Email: aasmi@example.com
+              </p>
+              <p className="text-xs text-purple-600">Password: password123</p>
             </div>
           )}
 
@@ -173,7 +175,7 @@ export default function LoginPage() {
                 <button
                   type="button"
                   onClick={() => setIsSignUp(!isSignUp)}
-                  className="text-blue-600 hover:text-blue-700 font-medium"
+                  className="text-purple-600 hover:text-purple-700 font-medium"
                 >
                   {isSignUp ? "Sign in here" : "Sign up here"}
                 </button>
