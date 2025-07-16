@@ -341,7 +341,7 @@ input[type="password"],
 input[type="date"],
 select,
 textarea {
-  color: #1f2937 !important;
+  color: #000000 !important;
   background-color: white !important;
 }
 
@@ -349,6 +349,60 @@ input::placeholder,
 select::placeholder,
 textarea::placeholder {
   color: #6b7280 !important;
+}
+
+/* Force all text to be black */
+body,
+p,
+span,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+a {
+  color: #000000 !important;
+}
+
+/* Specific overrides for date inputs */
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+  color: #000000 !important;
+  background-color: white !important;
+}
+
+/* Firefox date input */
+input[type="date"] {
+  color-scheme: light;
+  background-color: white !important;
+}
+
+/* Sidebar hover fix */
+.sidebar-item:hover,
+nav button:hover,
+.navigation-item:hover {
+  background-color: rgba(147, 51, 234, 0.1) !important;
+  color: #000000 !important;
+}
+
+/* Override any white text */
+.text-white {
+  color: #000000 !important;
+}
+
+/* Exceptions for specific white text that should remain white */
+button.btn-primary,
+button[class*="bg-purple"],
+button[class*="from-purple"],
+.bg-purple-600,
+.bg-gradient-to-r {
+  color: white !important;
 }
 
 .glass-effect {
