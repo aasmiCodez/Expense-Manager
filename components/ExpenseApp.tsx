@@ -76,7 +76,7 @@ export default function ExpenseApp() {
       case "settings":
         return <Settings />;
       default:
-        return <MasonryDashboard />;
+        return <Dashboard />;
     }
   };
 
