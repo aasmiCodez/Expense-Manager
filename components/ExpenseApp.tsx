@@ -65,6 +65,8 @@ export default function ExpenseApp() {
     switch (currentPage) {
       case "dashboard":
         return <Dashboard />;
+      case "masonry":
+        return <MasonryDashboard />;
       case "add":
         return <AddExpense />;
       case "analytics":
@@ -74,7 +76,7 @@ export default function ExpenseApp() {
       case "settings":
         return <Settings />;
       default:
-        return <Dashboard />;
+        return <MasonryDashboard />;
     }
   };
 
