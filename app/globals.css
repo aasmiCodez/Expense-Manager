@@ -363,7 +363,17 @@ h4,
 h5,
 h6,
 label,
-a {
+a,
+button {
+  color: #000000 !important;
+}
+
+/* Force all text classes to be black */
+.text-gray-700,
+.text-gray-600,
+.text-gray-500,
+.text-gray-800,
+.text-gray-900 {
   color: #000000 !important;
 }
 
@@ -379,7 +389,20 @@ input[type="date"]::-webkit-datetime-edit-year-field {
 
 /* Firefox date input */
 input[type="date"] {
-  color-scheme: light;
+  color-scheme: light !important;
+  background-color: white !important;
+  color: #000000 !important;
+}
+
+/* Chrome date input parts */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0) !important;
+  background-color: white !important;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  color: #000000 !important;
   background-color: white !important;
 }
 
