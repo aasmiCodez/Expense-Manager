@@ -1305,29 +1305,134 @@ option {
 }
 
 /* Masonry animation delays for staggered effect */
+.masonry-item {
+  animation: masonryFadeIn 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
 .masonry-item:nth-child(1) {
   animation-delay: 0.1s;
 }
 .masonry-item:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: 0.15s;
 }
 .masonry-item:nth-child(3) {
-  animation-delay: 0.3s;
+  animation-delay: 0.2s;
 }
 .masonry-item:nth-child(4) {
-  animation-delay: 0.4s;
+  animation-delay: 0.25s;
 }
 .masonry-item:nth-child(5) {
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 .masonry-item:nth-child(6) {
-  animation-delay: 0.6s;
+  animation-delay: 0.35s;
 }
 .masonry-item:nth-child(7) {
-  animation-delay: 0.7s;
+  animation-delay: 0.4s;
 }
 .masonry-item:nth-child(8) {
-  animation-delay: 0.8s;
+  animation-delay: 0.45s;
+}
+.masonry-item:nth-child(9) {
+  animation-delay: 0.5s;
+}
+.masonry-item:nth-child(10) {
+  animation-delay: 0.55s;
+}
+
+/* Masonry fade in animation */
+@keyframes masonryFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pinterest-style masonry gaps and columns */
+@media (min-width: 480px) and (max-width: 768px) {
+  .masonry-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .masonry-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .masonry-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1441px) {
+  .masonry-container {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Enhanced masonry item interactions */
+.masonry-item {
+  cursor: pointer;
+  will-change: transform;
+}
+
+.masonry-item:active {
+  transform: translateY(-4px) scale(0.98);
+}
+
+/* Beautiful progress bars in masonry items */
+.masonry-progress-bar {
+  background: linear-gradient(
+    90deg,
+    rgba(147, 51, 234, 0.2) 0%,
+    rgba(59, 130, 246, 0.2) 50%,
+    rgba(236, 72, 153, 0.2) 100%
+  );
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.masonry-progress-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #9333ea 0%, #3b82f6 50%, #ec4899 100%);
+  border-radius: inherit;
+  transition: width 0.8s ease-out;
+}
+
+/* Masonry card content spacing */
+.masonry-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+
+.masonry-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.masonry-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 /* Enhanced mobile interactions */
