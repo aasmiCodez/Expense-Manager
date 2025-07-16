@@ -249,7 +249,7 @@ export default function AddExpense() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-black mb-2">
                 Amount (₹)*
               </label>
               <input
@@ -266,7 +266,7 @@ export default function AddExpense() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-black mb-2">
                 Description*
               </label>
               <input
@@ -282,7 +282,7 @@ export default function AddExpense() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-black mb-2">
                 Category*
               </label>
               <select
@@ -398,7 +398,7 @@ export default function AddExpense() {
               className="flex flex-col items-center p-4 rounded-lg border hover:bg-gray-50 transition-all duration-200 hover:shadow-md hover:scale-105"
             >
               <div className="text-gray-600 mb-2">{category.icon}</div>
-              <span className="text-xs font-medium text-gray-700 text-center">
+              <span className="text-xs font-medium text-black text-center">
                 {category.name}
               </span>
             </button>
