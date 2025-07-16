@@ -360,7 +360,7 @@ export default function Dashboard() {
               {categoryData.map((category, index) => (
                 <div key={index}>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-medium text-black">
                       {category.name}
                     </span>
                     <span className="text-sm text-gray-500">
@@ -405,7 +405,7 @@ export default function Dashboard() {
                 />
               </svg>
             </div>
-            <div className="text-sm font-medium text-gray-700">Add Expense</div>
+            <div className="text-sm font-medium text-black">Add Expense</div>
           </button>
           <button className="p-4 text-center hover:bg-gray-50 rounded-lg transition-all duration-200 hover:scale-105">
             <div className="text-gray-600 mb-2">
@@ -423,9 +423,7 @@ export default function Dashboard() {
                 />
               </svg>
             </div>
-            <div className="text-sm font-medium text-gray-700">
-              View Analytics
-            </div>
+            <div className="text-sm font-medium text-black">View Analytics</div>
           </button>
           <button className="p-4 text-center hover:bg-gray-50 rounded-lg transition-all duration-200 hover:scale-105">
             <div className="text-gray-600 mb-2">
@@ -443,7 +441,7 @@ export default function Dashboard() {
                 />
               </svg>
             </div>
-            <div className="text-sm font-medium text-gray-700">Set Budget</div>
+            <div className="text-sm font-medium text-black">Set Budget</div>
           </button>
           <button className="p-4 text-center hover:bg-gray-50 rounded-lg transition-all duration-200 hover:scale-105">
             <div className="text-gray-600 mb-2">
@@ -461,7 +459,7 @@ export default function Dashboard() {
                 />
               </svg>
             </div>
-            <div className="text-sm font-medium text-gray-700">Export Data</div>
+            <div className="text-sm font-medium text-black">Export Data</div>
           </button>
         </div>
       </div>
