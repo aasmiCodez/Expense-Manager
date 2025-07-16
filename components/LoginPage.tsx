@@ -52,7 +52,7 @@ export default function LoginPage() {
       <div className="bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all duration-300 hover:scale-105 border border-purple-300 relative z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10 rounded-3xl"></div>
         {/* Header */}
-        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 p-8 text-center relative overflow-hidden">
+        <div className="bg-gradient-to-r from-purple-600 to-purple-700 p-8 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-blue-400/20 animate-pulse"></div>
           <div
             className="w-18 h-18 bg-white/20 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-4 relative z-10 shadow-xl"
