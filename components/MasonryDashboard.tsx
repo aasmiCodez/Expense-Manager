@@ -292,7 +292,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -326,7 +326,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -369,7 +369,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -414,7 +414,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -454,7 +454,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -500,7 +500,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
@@ -530,7 +530,7 @@ export default function MasonryDashboard() {
         return (
           <div
             key={item.id}
-            className={`${baseClasses} ${sizeClasses[item.size]} p-6`}
+            className={`${baseClasses} ${sizeClasses[item.size as keyof typeof sizeClasses]} p-6`}
           >
             <div
               className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-500`}
