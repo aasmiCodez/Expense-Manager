@@ -477,12 +477,52 @@ h6 {
   font-weight: 700 !important;
 }
 
-/* Ensure white text stays white on purple backgrounds */
+/* Comprehensive rules for white text on purple backgrounds */
 .bg-gradient-to-r .text-white,
+.bg-gradient-to-l .text-white,
+.bg-gradient-to-t .text-white,
+.bg-gradient-to-b .text-white,
+.bg-gradient-to-br .text-white,
+.bg-gradient-to-bl .text-white,
+.bg-gradient-to-tr .text-white,
+.bg-gradient-to-tl .text-white,
 [class*="bg-purple"] .text-white,
-[class*="from-purple"] .text-white {
+[class*="from-purple"] .text-white,
+[class*="to-purple"] .text-white,
+[class*="via-purple"] .text-white {
   color: #ffffff !important;
   font-weight: 700 !important;
+}
+
+/* Force white text and icons on purple gradient backgrounds */
+[style*="background: linear-gradient"] *,
+[style*="background-image: linear-gradient"] *,
+[class*="bg-gradient-to-r"][class*="purple"] *,
+[class*="from-purple"] * {
+  color: #ffffff !important;
+}
+
+/* Specific overrides for common elements on purple backgrounds */
+.bg-gradient-to-r h1,
+.bg-gradient-to-r h2,
+.bg-gradient-to-r h3,
+.bg-gradient-to-r h4,
+.bg-gradient-to-r h5,
+.bg-gradient-to-r h6,
+.bg-gradient-to-r p,
+.bg-gradient-to-r span,
+.bg-gradient-to-r svg,
+[class*="from-purple"] h1,
+[class*="from-purple"] h2,
+[class*="from-purple"] h3,
+[class*="from-purple"] h4,
+[class*="from-purple"] h5,
+[class*="from-purple"] h6,
+[class*="from-purple"] p,
+[class*="from-purple"] span,
+[class*="from-purple"] svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 /* Labels should be bold and gray */
