@@ -27,7 +27,7 @@ export default function ExpenseApp() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center safe-area-top safe-area-bottom relative overflow-hidden">
+      <div className="min-h-screen bg-white flex items-center justify-center safe-area-top safe-area-bottom relative overflow-hidden">
         {/* Animated background orbs */}
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div
@@ -81,7 +81,7 @@ export default function ExpenseApp() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-white relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
