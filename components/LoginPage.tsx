@@ -38,11 +38,26 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100 flex items-center justify-center p-4 animate-fade-in-up">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all duration-300 hover:scale-105">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4 animate-fade-in-up relative overflow-hidden">
+      {/* Animated background orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div
+        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
+        style={{ animationDelay: "2s" }}
+      ></div>
+      <div
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-pulse"
+        style={{ animationDelay: "4s" }}
+      ></div>
+      <div className="bg-slate-800/90 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all duration-300 hover:scale-105 border border-purple-500/30 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10 rounded-3xl"></div>
         {/* Header */}
-        <div className="bg-gradient-to-r from-purple-600 to-purple-800 p-8 text-center">
-          <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 p-8 text-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-blue-400/20 animate-pulse"></div>
+          <div
+            className="w-18 h-18 bg-white/20 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-4 relative z-10 shadow-xl"
+            style={{ filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.3))" }}
+          >
             <svg
               className="w-10 h-10 text-white"
               fill="none"
@@ -66,27 +81,27 @@ export default function LoginPage() {
         </div>
 
         {/* Form */}
-        <div className="p-8">
+        <div className="p-8 relative z-10">
           {/* Demo credentials */}
           {!isSignUp && (
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-6">
+            <div className="bg-slate-700/50 border border-purple-500/30 rounded-lg p-4 mb-6 backdrop-blur-sm">
               <div className="flex items-center justify-between mb-2">
-                <p className="text-sm font-medium text-purple-800">
+                <p className="text-sm font-medium text-purple-300">
                   Demo Credentials
                 </p>
                 <button
                   type="button"
                   onClick={handleDemoLogin}
                   disabled={isLoading}
-                  className="text-xs text-purple-600 hover:text-purple-700 font-medium disabled:text-gray-400 disabled:cursor-not-allowed"
+                  className="text-xs text-purple-400 hover:text-purple-300 font-medium disabled:text-slate-500 disabled:cursor-not-allowed"
                 >
                   Use Demo →
                 </button>
               </div>
-              <p className="text-xs text-purple-600">
+              <p className="text-xs text-purple-300">
                 Email: aasmi@example.com
               </p>
-              <p className="text-xs text-purple-600">Password: password123</p>
+              <p className="text-xs text-purple-300">Password: password123</p>
             </div>
           )}
 
