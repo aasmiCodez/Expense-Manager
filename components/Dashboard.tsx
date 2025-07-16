@@ -356,7 +356,7 @@ export default function Dashboard() {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-purple-200 rounded-full flex items-center justify-center text-purple-400 border border-purple-500/30 shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-r from-gray-100 to-gray-200 rounded-full flex items-center justify-center text-gray-700 border border-gray-300 shadow-lg">
                       {getTransactionIcon(transaction.category)}
                     </div>
                     <div>
@@ -399,7 +399,7 @@ export default function Dashboard() {
                       {category.name}
                     </span>
                     <span className="text-sm text-gray-500">
-                      ₹{category.amount.toLocaleString()}
+                      ���{category.amount.toLocaleString()}
                     </span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
