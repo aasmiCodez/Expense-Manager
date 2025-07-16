@@ -72,14 +72,14 @@ export default function Analytics() {
             <button
               key={period}
               onClick={() => setSelectedPeriod(period)}
-              className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+              className={`px-3 py-1.5 text-sm font-bold rounded-md transition-colors ${
                 selectedPeriod === period
                   ? "bg-gradient-to-r from-purple-600 to-purple-700"
                   : "hover:bg-purple-50"
               }`}
               style={{
-                color: selectedPeriod === period ? "#ffffff" : "#111827",
-                fontWeight: "600",
+                color: selectedPeriod === period ? "#ffffff" : "#000000",
+                fontWeight: "700",
               }}
             >
               {period.charAt(0).toUpperCase() + period.slice(1)}
