@@ -38,53 +38,70 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4 animate-fade-in-up relative overflow-hidden">
+      {/* Animated background orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div
+        className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
+        style={{ animationDelay: "2s" }}
+      ></div>
+      <div
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/20 rounded-full blur-3xl animate-pulse"
+        style={{ animationDelay: "4s" }}
+      ></div>
+      <div className="bg-slate-800/90 backdrop-blur-xl rounded-3xl shadow-2xl w-full max-w-md overflow-hidden transform transition-all duration-300 hover:scale-105 border border-purple-500/30 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10 rounded-3xl"></div>
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 text-center">
-          <div className="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 p-8 text-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-blue-400/20 animate-pulse"></div>
+          <div
+            className="w-18 h-18 bg-white/20 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-4 relative z-10 shadow-xl"
+            style={{ filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.3))" }}
+          >
             <svg
               className="w-10 h-10 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              strokeWidth={2}
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2}
-                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"
               />
             </svg>
           </div>
           <h1 className="text-2xl font-bold text-white mb-2">
             {isSignUp ? "Create Account" : "Welcome Back"}
           </h1>
-          <p className="text-blue-100">
+          <p className="text-purple-100">
             {isSignUp ? "Join ExpenseTracker today" : "Sign in to your account"}
           </p>
         </div>
 
         {/* Form */}
-        <div className="p-8">
+        <div className="p-8 relative z-10">
           {/* Demo credentials */}
           {!isSignUp && (
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+            <div className="bg-slate-700/50 border border-purple-500/30 rounded-lg p-4 mb-6 backdrop-blur-sm">
               <div className="flex items-center justify-between mb-2">
-                <p className="text-sm font-medium text-blue-800">
+                <p className="text-sm font-medium text-purple-300">
                   Demo Credentials
                 </p>
                 <button
                   type="button"
                   onClick={handleDemoLogin}
                   disabled={isLoading}
-                  className="text-xs text-blue-600 hover:text-blue-700 font-medium disabled:text-gray-400 disabled:cursor-not-allowed"
+                  className="text-xs text-purple-400 hover:text-purple-300 font-medium disabled:text-slate-500 disabled:cursor-not-allowed"
                 >
                   Use Demo →
                 </button>
               </div>
-              <p className="text-xs text-blue-600">Email: aasmi@example.com</p>
-              <p className="text-xs text-blue-600">Password: password123</p>
+              <p className="text-xs text-purple-300">
+                Email: aasmi@example.com
+              </p>
+              <p className="text-xs text-purple-300">Password: password123</p>
             </div>
           )}
 
@@ -97,7 +114,7 @@ export default function LoginPage() {
 
             {isSignUp && (
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Full Name
                 </label>
                 <input
@@ -107,7 +124,7 @@ export default function LoginPage() {
                     setFormData({ ...formData, name: e.target.value })
                   }
                   disabled={isLoading}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
                   placeholder="Enter your full name"
                   required
                 />
@@ -115,7 +132,7 @@ export default function LoginPage() {
             )}
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-black mb-2">
                 Email Address
               </label>
               <input
@@ -125,14 +142,14 @@ export default function LoginPage() {
                   setFormData({ ...formData, email: e.target.value })
                 }
                 disabled={isLoading}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
                 placeholder="Enter your email"
                 required
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-black mb-2">
                 Password
               </label>
               <input
@@ -142,7 +159,7 @@ export default function LoginPage() {
                   setFormData({ ...formData, password: e.target.value })
                 }
                 disabled={isLoading}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-50 disabled:cursor-not-allowed text-gray-900 placeholder-gray-500"
                 placeholder="Enter your password"
                 required
               />
@@ -151,7 +168,8 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-gradient-to-r from-purple-600 to-purple-700 py-3 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-purple-800 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95"
+              style={{ color: "#ffffff", fontWeight: "600" }}
             >
               {isLoading ? (
                 <div className="flex items-center justify-center">
@@ -173,7 +191,7 @@ export default function LoginPage() {
                 <button
                   type="button"
                   onClick={() => setIsSignUp(!isSignUp)}
-                  className="text-blue-600 hover:text-blue-700 font-medium"
+                  className="text-purple-600 hover:text-purple-700 font-medium"
                 >
                   {isSignUp ? "Sign in here" : "Sign up here"}
                 </button>

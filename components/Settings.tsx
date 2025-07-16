@@ -35,17 +35,21 @@ export default function Settings() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 lg:space-y-8">
       <div>
-        <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">
-          Settings
-        </h1>
-        <p className="text-gray-600 mt-1">
-          Manage your account preferences and app settings
-        </p>
+        <div className="animate-slide-in-left">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+            <span className="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+              Settings
+            </span>
+          </h1>
+          <p className="text-gray-600 text-base sm:text-lg">
+            Manage your account preferences and app settings
+          </p>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
         {/* Profile Settings */}
         <div className="lg:col-span-2 space-y-6">
           <div className="bg-white rounded-xl shadow-sm border p-6">
@@ -77,7 +81,7 @@ export default function Settings() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Full Name
                 </label>
                 <input
@@ -92,7 +96,7 @@ export default function Settings() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Email Address
                 </label>
                 <input
@@ -107,7 +111,7 @@ export default function Settings() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Default Currency
                 </label>
                 <select
@@ -126,7 +130,7 @@ export default function Settings() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-black mb-2">
                   Language
                 </label>
                 <select

@@ -72,11 +72,15 @@ export default function Analytics() {
             <button
               key={period}
               onClick={() => setSelectedPeriod(period)}
-              className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+              className={`px-3 py-1.5 text-sm font-bold rounded-md transition-colors ${
                 selectedPeriod === period
-                  ? "bg-blue-600 text-white"
-                  : "text-gray-600 hover:text-gray-900"
+                  ? "bg-gradient-to-r from-purple-600 to-purple-700"
+                  : "hover:bg-purple-50"
               }`}
+              style={{
+                color: selectedPeriod === period ? "#ffffff" : "#000000",
+                fontWeight: "700",
+              }}
             >
               {period.charAt(0).toUpperCase() + period.slice(1)}
             </button>
@@ -105,7 +109,7 @@ export default function Analytics() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Monthly Trend */}
-        <div className="bg-white rounded-xl shadow-sm border">
+        <div className="bg-white rounded-xl shadow-sm border card animate-scale-in">
           <div className="p-6 border-b">
             <h3 className="text-lg font-semibold text-gray-900">
               Income vs Expenses
@@ -115,7 +119,7 @@ export default function Analytics() {
             <div className="space-y-4">
               {monthlyData.map((data, index) => (
                 <div key={index} className="flex items-center justify-between">
-                  <div className="text-sm font-medium text-gray-700">
+                  <div className="text-sm font-medium text-black">
                     {data.month}
                   </div>
                   <div className="flex items-center space-x-4">
@@ -143,7 +147,7 @@ export default function Analytics() {
         </div>
 
         {/* Category Breakdown */}
-        <div className="bg-white rounded-xl shadow-sm border">
+        <div className="bg-white rounded-xl shadow-sm border card animate-scale-in">
           <div className="p-6 border-b">
             <h3 className="text-lg font-semibold text-gray-900">
               Spending by Category
@@ -154,7 +158,7 @@ export default function Analytics() {
               {categoryBreakdown.map((category, index) => (
                 <div key={index}>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-medium text-black">
                       {category.category}
                     </span>
                     <div className="flex items-center space-x-2">
@@ -189,7 +193,7 @@ export default function Analytics() {
       </div>
 
       {/* Detailed Stats */}
-      <div className="bg-white rounded-xl shadow-sm border">
+      <div className="bg-white rounded-xl shadow-sm border card animate-scale-in">
         <div className="p-6 border-b">
           <h3 className="text-lg font-semibold text-gray-900">
             Detailed Statistics
