@@ -582,6 +582,47 @@ div[class*="to-gray-200"] svg {
   stroke: #9333ea !important;
 }
 
+/* Ultimate overrides - using attribute selectors */
+svg[class*="text-yellow-300"] {
+  color: #fde047 !important;
+  stroke: #fde047 !important;
+  fill: #fde047 !important;
+}
+
+svg[class*="text-gray-700"] {
+  color: #374151 !important;
+  stroke: #374151 !important;
+  fill: #374151 !important;
+}
+
+/* Force color by targeting specific pattern matches */
+[class*="w-7 h-7 text-yellow-300"] {
+  color: #fde047 !important;
+  stroke: #fde047 !important;
+}
+
+[class*="w-12 h-12"][class*="text-gray-700"] {
+  color: #374151 !important;
+  stroke: #374151 !important;
+}
+
+/* Nuclear option - override everything with these classes */
+* + .text-yellow-300,
+* .text-yellow-300,
+.text-yellow-300 * {
+  color: #fde047 !important;
+  stroke: #fde047 !important;
+  fill: #fde047 !important;
+}
+
+* + .text-gray-700,
+* .text-gray-700,
+.text-gray-700 * {
+  color: #374151 !important;
+  stroke: #374151 !important;
+  fill: #374151 !important;
+}
+
 /* Labels should be bold and gray */
 label {
   color: #374151 !important;
