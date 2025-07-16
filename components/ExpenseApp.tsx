@@ -23,9 +23,7 @@ export default function ExpenseApp() {
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-purple-100 flex items-center justify-center safe-area-top safe-area-bottom">
         <div className="text-center p-8 bg-white/70 backdrop-blur-xl rounded-2xl shadow-xl card animate-scale-in">
           <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-6" />
-          <p className="text-gray-700 font-medium">
-            Checking authentication...
-          </p>
+          <p className="text-black font-medium">Checking authentication...</p>
           <p className="text-gray-500 text-sm mt-2">Please wait a moment</p>
         </div>
       </div>
