@@ -75,7 +75,7 @@ export default function LoginPage() {
           <h1 className="text-2xl font-bold text-white mb-2">
             {isSignUp ? "Create Account" : "Welcome Back"}
           </h1>
-          <p className="text-purple-100">
+          <p className="text-white">
             {isSignUp ? "Join ExpenseTracker today" : "Sign in to your account"}
           </p>
         </div>
