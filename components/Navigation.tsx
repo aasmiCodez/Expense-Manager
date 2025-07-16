@@ -144,7 +144,7 @@ export default function Navigation({
               />
             </svg>
           </div>
-          <h1 className="text-xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
+          <h1 className="text-xl font-bold bg-gradient-to-r text-gray-900">
             ExpenseTracker
           </h1>
         </div>
@@ -170,12 +170,12 @@ export default function Navigation({
 
       {/* Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 bg-slate-800/95 backdrop-blur-xl shadow-2xl border-r border-purple-500/30 transform transition-all duration-300 ease-out lg:transform-none lg:shadow-lg ${sidebarCollapsed ? "w-20 lg:w-20" : "w-72 lg:w-64"} ${
+        className={`fixed inset-y-0 left-0 z-50 bg-white/95 backdrop-blur-xl shadow-2xl border-r border-purple-500/30 transform transition-all duration-300 ease-out lg:transform-none lg:shadow-lg ${sidebarCollapsed ? "w-20 lg:w-20" : "w-72 lg:w-64"} ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0`}
       >
         {/* Header */}
-        <div className="flex items-center px-6 py-6 border-b border-purple-500/30 bg-gradient-to-r from-slate-800 to-slate-700 relative overflow-hidden">
+        <div className="flex items-center px-6 py-6 border-b border-purple-500/30 bg-gradient-to-r from-white to-purple-50 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-pink-500/10 animate-pulse"></div>
           <div
             className="relative z-10 w-12 h-12 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-xl flex items-center justify-center shadow-lg animate-float"
@@ -197,10 +197,10 @@ export default function Navigation({
           </div>
           {!sidebarCollapsed && (
             <div className="ml-3">
-              <span className="text-xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r text-gray-900">
                 ExpenseTracker
               </span>
-              <p className="text-xs text-slate-300 mt-1">
+              <p className="text-xs text-gray-600 mt-1">
                 Modern Finance Management
               </p>
             </div>
@@ -208,7 +208,7 @@ export default function Navigation({
           {/* Collapse Toggle - Desktop Only */}
           <button
             onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-            className="hidden lg:flex absolute -right-3 top-1/2 transform -translate-y-1/2 w-7 h-7 bg-slate-700 border border-purple-500/50 rounded-full items-center justify-center hover:bg-slate-600 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
+            className="hidden lg:flex absolute -right-3 top-1/2 transform -translate-y-1/2 w-7 h-7 bg-purple-100 border border-purple-500/50 rounded-full items-center justify-center hover:bg-purple-200 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
           >
             <svg
               className={`w-3 h-3 text-gray-600 transition-transform duration-200 ${sidebarCollapsed ? "rotate-180" : ""}`}
