@@ -420,7 +420,8 @@ export default function Budget() {
                   </button>
                   <button
                     type="submit"
-                    className="flex-1 px-4 py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl hover:from-purple-700 hover:to-purple-800 transition-all duration-200 font-medium shadow-lg"
+                    className="flex-1 px-4 py-3 bg-gradient-to-r from-purple-600 to-purple-700 rounded-xl hover:from-purple-700 hover:to-purple-800 transition-all duration-200 font-medium shadow-lg"
+                    style={{ color: "#ffffff", fontWeight: "600" }}
                   >
                     Add Budget
                   </button>
@@ -432,7 +433,10 @@ export default function Budget() {
       )}
 
       {/* Budget Insights */}
-      <div className="bg-gradient-to-r from-purple-600 to-purple-800 rounded-xl p-6 text-white">
+      <div
+        className="bg-gradient-to-r from-purple-600 to-purple-800 rounded-xl p-6"
+        style={{ color: "#ffffff" }}
+      >
         <div className="flex items-center space-x-3 mb-4">
           <svg
             className="w-6 h-6"
