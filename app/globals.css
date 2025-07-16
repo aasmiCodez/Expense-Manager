@@ -473,18 +473,55 @@ nav button:hover,
   color: #000000 !important;
 }
 
-/* Override any white text */
-.text-white {
-  color: #000000 !important;
+/* Override any white text globally */
+.text-white,
+[style*="color: white"],
+[style*="color: #ffffff"],
+[style*="color: #fff"],
+[style*="color:white"],
+[style*="color:#ffffff"],
+[style*="color:#fff"] {
+  color: #111827 !important;
+  font-weight: 600 !important;
 }
 
-/* Exceptions for specific white text that should remain white */
+/* Force any remaining white text to be dark */
+* {
+  color: inherit;
+}
+
+*:not(button):not(.btn-primary):not([class*="bg-purple"]):not(
+    [class*="from-purple"]
+  ) {
+  color: #1f2937 !important;
+}
+
+/* Exceptions for specific elements that should have white text */
 button.btn-primary,
 button[class*="bg-purple"],
 button[class*="from-purple"],
 .bg-purple-600,
-.bg-gradient-to-r {
-  color: white !important;
+.bg-gradient-to-r,
+.bg-purple-700,
+.bg-purple-800 {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Ensure strong contrast for important text */
+.font-bold,
+.font-semibold,
+.font-medium {
+  color: #111827 !important;
+  font-weight: 700 !important;
+}
+
+/* Date input wrapper fixes for any container issues */
+.date-input-wrapper,
+.form-group,
+.input-group {
+  background-color: #ffffff !important;
+  color: #111827 !important;
 }
 
 .glass-effect {
