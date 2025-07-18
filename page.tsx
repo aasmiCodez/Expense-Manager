@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AuthProvider } from "../contexts/AuthContext";
-import ExpenseApp from "../components/ExpenseApp";
+import { AuthProvider } from "@/contexts/AuthContext";
+import ExpenseApp from "@/components/ExpenseApp";
 
 export default function HomePage() {
   const [mounted, setMounted] = useState(false);
