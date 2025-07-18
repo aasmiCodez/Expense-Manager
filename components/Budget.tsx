@@ -215,7 +215,7 @@ export default function Budget() {
         </div>
         <button
           onClick={() => setShowAddForm(true)}
-          className="btn-primary px-6 py-3 rounded-xl font-medium flex items-center space-x-2 shadow-lg"
+          className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-xl font-medium flex items-center space-x-2 shadow-lg hover:from-purple-700 hover:to-purple-800 hover:-translate-y-1 hover:scale-105 transition-all duration-300"
         >
           <svg
             className="w-5 h-5"
@@ -235,7 +235,7 @@ export default function Budget() {
       </div>
 
       {/* Overall Progress */}
-      <div className="bg-white rounded-xl shadow-sm border p-6 card animate-scale-in">
+      <div className="bg-white rounded-xl shadow-sm border p-6 hover:shadow-md transition-all duration-300 animate-scale-in">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-900">
             Overall Budget
@@ -308,11 +308,11 @@ export default function Budget() {
           return (
             <div
               key={budget.id}
-              className="bg-white rounded-xl shadow-sm border p-6 hover:shadow-md transition-all duration-300 hover:scale-105 card animate-fade-in-up"
+              className="bg-white rounded-xl shadow-sm border p-6 hover:shadow-md transition-all duration-300 hover:scale-105 animate-fade-in-up"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-3">
-                  <div className="p-3 bg-purple-50 rounded-lg text-purple-600">
+                  <div className="p-3 bg-white rounded-lg text-purple-600 border border-purple-100 shadow-sm">
                     {budget.icon}
                   </div>
                   <div>

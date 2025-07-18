@@ -242,7 +242,7 @@ export default function AddExpense() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
         {/* Add Expense Form */}
-        <div className="bg-white rounded-xl shadow-sm border p-6 card animate-scale-in">
+        <div className="bg-white rounded-xl shadow-sm border p-6 hover:shadow-md transition-all duration-300 animate-scale-in">
           <h2 className="text-lg font-semibold text-gray-900 mb-6">
             New Expense
           </h2>
@@ -348,7 +348,7 @@ export default function AddExpense() {
 
             <button
               type="submit"
-              className="btn-primary w-full py-3 px-4 font-medium"
+              className="bg-gradient-to-r from-purple-600 to-purple-700 text-white w-full py-3 px-4 font-medium rounded-xl hover:from-purple-700 hover:to-purple-800 hover:-translate-y-1 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Add Expense
             </button>
@@ -356,7 +356,7 @@ export default function AddExpense() {
         </div>
 
         {/* Recent Expenses */}
-        <div className="bg-white rounded-xl shadow-sm border card animate-scale-in">
+        <div className="bg-white rounded-xl shadow-sm border hover:shadow-md transition-all duration-300 animate-scale-in">
           <div className="p-6 border-b">
             <h3 className="text-lg font-semibold text-gray-900">
               Recent Expenses
@@ -388,7 +388,7 @@ export default function AddExpense() {
       </div>
 
       {/* Quick Add Categories */}
-      <div className="bg-white rounded-xl shadow-sm border p-6 card animate-scale-in">
+      <div className="bg-white rounded-xl shadow-sm border p-6 hover:shadow-md transition-all duration-300 animate-scale-in">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Add</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3">
           {categories.map((category) => (
@@ -399,7 +399,9 @@ export default function AddExpense() {
               }
               className="flex flex-col items-center p-4 rounded-lg border hover:bg-gray-50 transition-all duration-200 hover:shadow-md hover:scale-105"
             >
-              <div className="text-gray-600 mb-2">{category.icon}</div>
+              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-purple-600 mb-2 border border-purple-100 shadow-sm">
+                {category.icon}
+              </div>
               <span className="text-xs font-medium text-black text-center">
                 {category.name}
               </span>

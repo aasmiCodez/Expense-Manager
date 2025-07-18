@@ -272,8 +272,7 @@ export default function MasonryDashboard() {
 
   const renderMasonryItem = (item: any) => {
     const baseClasses = `
-      masonry-item
-      bg-white/90 backdrop-blur-xl rounded-3xl 
+            bg-white/90 backdrop-blur-xl rounded-3xl 
       border border-purple-500/30 hover:border-purple-500/60
       transition-all duration-500 hover:scale-[1.02] 
       relative overflow-hidden group cursor-pointer
@@ -282,9 +281,9 @@ export default function MasonryDashboard() {
     `;
 
     const sizeClasses = {
-      small: "masonry-small",
-      medium: "masonry-medium",
-      large: "masonry-large",
+      small: "min-h-[220px]",
+      medium: "min-h-[320px]",
+      large: "min-h-[480px]",
     };
 
     switch (item.type) {
@@ -299,10 +298,8 @@ export default function MasonryDashboard() {
             ></div>
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-4">
-                <div
-                  className={`p-3 rounded-2xl bg-gradient-to-r ${item.gradient} shadow-lg`}
-                >
-                  <div className="text-white">{item.icon}</div>
+                <div className="p-3 rounded-2xl bg-white shadow-lg border border-purple-100">
+                  <div className="text-purple-600">{item.icon}</div>
                 </div>
                 <div
                   className={`px-3 py-2 rounded-full text-sm font-bold ${
@@ -385,7 +382,7 @@ export default function MasonryDashboard() {
                     className="flex items-center justify-between p-3 bg-purple-50 rounded-xl"
                   >
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-gradient-to-r from-slate-600 to-slate-500 rounded-full flex items-center justify-center text-purple-400">
+                      <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-purple-600 shadow-sm border border-purple-100">
                         {getTransactionIcon(transaction.category)}
                       </div>
                       <div>
@@ -421,10 +418,8 @@ export default function MasonryDashboard() {
             ></div>
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-4">
-                <div
-                  className={`p-3 rounded-2xl bg-gradient-to-r ${item.gradient} shadow-lg`}
-                >
-                  <div className="text-white">{item.icon}</div>
+                <div className="p-3 rounded-2xl bg-white shadow-lg border border-purple-100">
+                  <div className="text-purple-600">{item.icon}</div>
                 </div>
               </div>
               <h3 className="text-lg font-bold bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent mb-4">
@@ -461,10 +456,8 @@ export default function MasonryDashboard() {
             ></div>
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-4">
-                <div
-                  className={`p-3 rounded-2xl bg-gradient-to-r ${item.gradient} shadow-lg`}
-                >
-                  <div className="text-white">{item.icon}</div>
+                <div className="p-3 rounded-2xl bg-white shadow-lg border border-purple-100">
+                  <div className="text-purple-600">{item.icon}</div>
                 </div>
               </div>
               <h3 className="text-lg font-bold bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent mb-4">
@@ -614,7 +607,7 @@ export default function MasonryDashboard() {
       </div>
 
       {/* Masonry Grid */}
-      <div className="masonry-container">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-max">
         {masonryItems.map(renderMasonryItem)}
       </div>
     </div>

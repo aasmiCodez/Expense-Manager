@@ -37,10 +37,10 @@ export default function ExpenseApp() {
                 filter: "drop-shadow(0 0 10px rgba(147, 51, 234, 0.5))",
               }}
             />
-            <p className="text-gray-800 font-semibold text-lg">
+            <p className="text-black font-semibold text-lg">
               Checking authentication...
             </p>
-            <p className="text-gray-600 text-sm mt-2">Please wait a moment</p>
+            <p className="text-black text-sm mt-2">Please wait a moment</p>
           </div>
         </div>
       </div>

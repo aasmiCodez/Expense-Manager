@@ -57,7 +57,7 @@ export default function LoginPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-purple-500/20 animate-pulse"></div>
           <div
             className="w-18 h-18 bg-white/20 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-4 relative z-10 shadow-xl"
-            style={{ filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.3))" }}
+            style={{ filter: "drop-shadow(0 0 20px rgba(230, 216, 216, 0.3))" }}
           >
             <svg
               className="w-10 h-10 text-white"
@@ -73,10 +73,10 @@ export default function LoginPage() {
               />
             </svg>
           </div>
-          <h1 className="text-2xl font-bold text-white mb-2">
+          <h1 className="text-2xl font-bold text-black mb-2">
             {isSignUp ? "Create Account" : "Welcome Back"}
           </h1>
-          <p className="text-white">
+          <p className="text-black">
             {isSignUp ? "Join ExpenseTracker today" : "Sign in to your account"}
           </p>
         </div>

@@ -129,9 +129,9 @@ export default function Navigation({
       {/* Modern Mobile header */}
       <div className="lg:hidden bg-white/90 backdrop-blur-lg shadow-sm border-b px-4 py-4 flex items-center justify-between sticky-header safe-area-top">
         <div className="flex items-center space-x-3">
-          <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-purple-800 rounded-lg flex items-center justify-center">
+          <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-md border border-gray-100">
             <svg
-              className="w-5 h-5 text-white"
+              className="w-5 h-5 text-purple-600"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -170,19 +170,16 @@ export default function Navigation({
 
       {/* Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 bg-white/95 backdrop-blur-xl shadow-2xl border-r border-purple-500/30 transform transition-all duration-300 ease-out lg:transform-none lg:shadow-lg ${sidebarCollapsed ? "w-20 lg:w-20" : "w-72 lg:w-64"} ${
+        className={`fixed inset-y-0 left-0 z-50 bg-white/95 backdrop-blur-xl shadow-2xl border-r border-purple-500/30 transform transition-all duration-300 ease-out lg:transform-purple lg:shadow-lg ${sidebarCollapsed ? "w-20 lg:w-20" : "w-72 lg:w-64"} ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0`}
       >
         {/* Header */}
         <div className="flex items-center px-6 py-6 border-b border-purple-500/30 bg-gradient-to-r from-white to-purple-50 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-pink-500/10 animate-pulse"></div>
-          <div
-            className="relative z-10 w-12 h-12 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-xl flex items-center justify-center shadow-lg animate-float"
-            style={{ filter: "drop-shadow(0 0 15px rgba(147, 51, 234, 0.6))" }}
-          >
+          <div className="relative z-10 w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg border border-purple-100">
             <svg
-              className="w-7 h-7 text-yellow-300"
+              className="w-7 h-7 text-purple-600"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -230,7 +227,7 @@ export default function Navigation({
         <div className="px-6 py-5 border-b bg-gradient-to-r from-purple-50 to-white">
           <div className="flex items-center">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-100 to-purple-200 rounded-full flex items-center justify-center shadow-md">
+              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-purple-100">
                 <span className="text-purple-600 font-semibold text-lg">
                   {user?.name?.charAt(0)}
                 </span>
@@ -271,10 +268,10 @@ export default function Navigation({
                 title={sidebarCollapsed ? item.label : ""}
               >
                 <div
-                  className={`${sidebarCollapsed ? "" : "mr-4"} p-2 rounded-lg transition-colors ${
+                  className={`${sidebarCollapsed ? "" : "mr-4"} p-2 rounded-lg transition-all duration-200 ${
                     currentPage === item.id
-                      ? "bg-purple-100 text-purple-600"
-                      : "bg-gray-100 text-gray-700 hover:bg-purple-100 hover:text-purple-600"
+                      ? "bg-purple-100 text-gray-600 shadow-sm"
+                      : "bg-white text-gray-600 hover:bg-purple-50 hover:text-purple-600 hover:shadow-sm border border-gray-100"
                   }`}
                 >
                   {item.icon}
