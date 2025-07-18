@@ -2,7 +2,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
       <div className="text-center">
-        <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg border border-purple-100">
           <span className="text-2xl">😵</span>
         </div>
         <h2 className="text-2xl font-bold text-gray-900 mb-2">

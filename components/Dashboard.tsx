@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { useAuth } from "../contexts/AuthContext";
 import {
   Wallet,
   TrendingDown,
@@ -18,6 +17,7 @@ import {
   PiggyBank,
   BarChart3,
 } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function Dashboard() {
   const { user } = useAuth();
